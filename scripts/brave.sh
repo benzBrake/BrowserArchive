@@ -2,6 +2,9 @@
 # Scrape the latest Brave / Brave Origin Windows installer links per channel
 # from https://versions.brave.com/latest/brave-versions.json and write
 # data/brave.json + data/brave-origin.json (links only, no downloads).
+# The output keeps the legacy `files` map and also exposes both installer and
+# ZIP assets under `packages`, so consumers can migrate without a breaking
+# format change.
 # Env: PROXY (optional, for local debugging)
 set -euo pipefail
 
@@ -42,13 +45,19 @@ def wanted_files(release, channel, prefix, zip_prefix):
     assets = {a["name"]: a["download_url"] for a in release["github"]["assets"]}
     files = {}
     for arch, (suffix, zip_arch) in WANTED.items():
-        filename = f"{prefix}{cap}{suffix}"
-        url = assets.get(filename)
-        if not url:  # nightly/dev ship zips instead of branded installers
-            filename = f"{zip_prefix}{release['name']}-{zip_arch}.zip"
-            url = assets.get(filename)
-        if url:
-            files[arch] = {"filename": filename, "url": url}
+        installer_name = f"{prefix}{cap}{suffix}"
+        zip_name = f"{zip_prefix}{release['name']}-{zip_arch}.zip"
+        installer_url = assets.get(installer_name)
+        zip_url = assets.get(zip_name)
+        packages = {}
+        if installer_url:
+            packages["installer"] = {"filename": installer_name, "url": installer_url}
+        if zip_url:
+            packages["zip"] = {"filename": zip_name, "url": zip_url}
+        if packages:
+            # `files` is the backwards-compatible single-choice view.
+            files[arch] = packages.get("installer") or packages["zip"]
+            files[arch + "_packages"] = packages
     return files
 
 
@@ -70,15 +79,19 @@ def latest_channels(prefix, zip_prefix):
 def build_document(product):
     channels = {}
     for channel, (release, files) in latest_channels(product["prefix"], product["zip"]).items():
+        legacy_files = {k: v for k, v in files.items() if not k.endswith("_packages")}
+        packages = {k[:-9]: v for k, v in files.items() if k.endswith("_packages")}
         channels[channel] = {
             "version": release["name"],
             "published": release["published"],
             "chrome": release["dependencies"]["chrome"],
-            "files": files,
+            "files": legacy_files,
+            "packages": packages,
         }
     if "stable" not in channels:
         raise SystemExit(f"no Windows installers found for {product['name']} stable, aborting")
     return {
+        "schema_version": 2,
         "name": product["name"],
         "version": channels["stable"]["version"],
         "date": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d"),
