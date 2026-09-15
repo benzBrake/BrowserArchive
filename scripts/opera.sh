@@ -55,6 +55,9 @@ def files(directory, ver):
     out = {}
     for arch, pats in {"x64": ("x64", "64"), "x86": ("x86", "32", "ia32")}.items():
         hits = [(u, n) for u, n in candidates if any(p in n.lower() for p in pats) and n.lower().endswith((".exe", ".msi"))]
+        # Opera's default Windows installer (without an arch suffix) is x86.
+        if arch == "x86" and not hits:
+            hits = [(u, n) for u, n in candidates if n.lower().endswith(("_setup.exe", ".msi")) and "x64" not in n.lower()]
         if hits:
             url, name = hits[0]
             out[arch] = {"filename": name, "url": url}
