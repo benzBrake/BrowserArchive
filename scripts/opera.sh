@@ -38,26 +38,26 @@ def files(directory, ver):
     # FTP uses both flat listings (opera/desktop) and version subdirectories
     # (opera/desktop/<version>, opera-developer/<version>); inspect three levels.
     root = FTP + directory.strip('/') + '/'
-    queue, candidates = [(root, 0)], []
+    queue, candidates = [(root, 0, False)], []
     seen = set()
     while queue:
-        url, depth = queue.pop(0)
+        url, depth, in_version = queue.pop(0)
         if url in seen or depth > 3: continue
         seen.add(url)
         html = get(url)
         for h in re.findall(r'href=["\']([^"\']+)["\']', html, re.I):
             name = urllib.parse.unquote(h)
             if name in ('../', './') or h.startswith('?'): continue
-            if ver in name and not h.endswith('/'):
-                candidates.append(name)
+            if (in_version or ver in name) and not h.endswith('/'):
+                candidates.append((urllib.parse.urljoin(url, h), name))
             elif h.endswith('/') and depth < 3 and (ver in name or directory == 'opera'):
-                queue.append((urllib.parse.urljoin(url, h), depth + 1))
+                queue.append((urllib.parse.urljoin(url, h), depth + 1, in_version or ver in name))
     out = {}
     for arch, pats in {"x64": ("x64", "64"), "x86": ("x86", "32", "ia32")}.items():
-        hits = [h for h in candidates if any(p in h.lower() for p in pats) and h.lower().endswith((".exe", ".msi"))]
+        hits = [(u, n) for u, n in candidates if any(p in n.lower() for p in pats) and n.lower().endswith((".exe", ".msi"))]
         if hits:
-            name = hits[0].rsplit('/', 1)[-1]
-            out[arch] = {"filename": name, "url": FTP + directory.strip('/') + "/" + urllib.parse.quote(name)}
+            url, name = hits[0]
+            out[arch] = {"filename": name, "url": url}
     if not out: raise RuntimeError(f"no Windows installers for {directory} {ver}")
     return out
 
