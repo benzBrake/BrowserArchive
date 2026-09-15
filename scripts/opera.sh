@@ -53,11 +53,11 @@ def files(directory, ver):
             elif h.endswith('/') and depth < 3 and (ver in name or directory == 'opera'):
                 queue.append((urllib.parse.urljoin(url, h), depth + 1, in_version or ver in name))
     out = {}
-    for arch, pats in {"x64": ("x64", "64"), "x86": ("x86", "32", "ia32")}.items():
-        hits = [(u, n) for u, n in candidates if any(p in n.lower() for p in pats) and n.lower().endswith((".exe", ".msi"))]
+    for arch, suffix in {"x64": "_x64", "arm64": "_arm64", "x86": None}.items():
+        hits = [(u, n) for u, n in candidates
+                if n.lower().endswith((".exe", ".msi")) and
+                ((suffix and suffix in n.lower()) or (suffix is None and n.lower().endswith("_setup.exe")))]
         # Opera's default Windows installer (without an arch suffix) is x86.
-        if arch == "x86" and not hits:
-            hits = [(u, n) for u, n in candidates if n.lower().endswith(("_setup.exe", ".msi")) and "x64" not in n.lower()]
         if hits:
             url, name = hits[0]
             out[arch] = {"filename": name, "url": url}
