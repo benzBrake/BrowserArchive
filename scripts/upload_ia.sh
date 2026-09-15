@@ -19,6 +19,10 @@ if [[ -z "${IA_ACCESS_KEY:-}" || -z "${IA_SECRET:-}" ]]; then
   exit 1
 fi
 
+# internetarchive >= 5 reads IA_ACCESS_KEY_ID / IA_SECRET_ACCESS_KEY
+export IA_ACCESS_KEY_ID="${IA_ACCESS_KEY}"
+export IA_SECRET_ACCESS_KEY="${IA_SECRET}"
+
 if ! command -v ia >/dev/null 2>&1; then
   pip install --quiet internetarchive
 fi

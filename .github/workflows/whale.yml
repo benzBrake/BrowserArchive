@@ -50,6 +50,7 @@ jobs:
           IA_ACCESS_KEY: ${{ secrets.IA_ACCESS_KEY }}
           IA_SECRET: ${{ secrets.IA_SECRET }}
         run: |
+          set -o pipefail
           chmod +x scripts/upload_ia.sh
           ./scripts/upload_ia.sh whale "${{ steps.build.outputs.version }}" build \
             WhaleSetupX86.exe WhaleSetupX64.exe WhaleSetupARM64.exe | tee ia_output.txt
