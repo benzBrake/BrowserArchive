@@ -1,0 +1,35 @@
+name: Brave Archive
+
+on:
+  schedule:
+    - cron: "0 1 * * *" # daily 09:00 Beijing time
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: brave-archive
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Scrape latest Windows versions and generate data/brave.json
+        run: |
+          bash scripts/brave.sh
+
+      - name: Commit data/brave.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/brave.json
+          if git diff --cached --quiet; then
+            echo "data/brave.json unchanged, skipping commit"
+          else
+            git commit -m "chore: update brave.json"
+            git push
+          fi

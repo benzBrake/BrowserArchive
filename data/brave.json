@@ -1,0 +1,68 @@
+{
+  "name": "Brave",
+  "version": "1.95.101",
+  "date": "2026-09-15",
+  "source": "https://versions.brave.com/latest/brave-versions.json",
+  "channels": {
+    "stable": {
+      "version": "1.95.101",
+      "published": "2026-09-11T03:31:20Z",
+      "chrome": "153.0.8010.37",
+      "release": "https://github.com/brave/brave-browser/releases/tag/v1.95.101",
+      "files": {
+        "x64": {
+          "filename": "BraveBrowserStandaloneSetup.exe",
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.95.101/BraveBrowserStandaloneSetup.exe"
+        },
+        "x86": {
+          "filename": "BraveBrowserStandaloneSetup32.exe",
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.95.101/BraveBrowserStandaloneSetup32.exe"
+        },
+        "arm64": {
+          "filename": "BraveBrowserStandaloneSetupArm64.exe",
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.95.101/BraveBrowserStandaloneSetupArm64.exe"
+        }
+      }
+    },
+    "beta": {
+      "version": "1.96.50",
+      "published": "2026-09-10T05:24:03Z",
+      "chrome": "153.0.8010.37",
+      "release": "https://github.com/brave/brave-browser/releases/tag/v1.96.50",
+      "files": {
+        "x64": {
+          "filename": "BraveBrowserStandaloneBetaSetup.exe",
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.96.50/BraveBrowserStandaloneBetaSetup.exe"
+        },
+        "x86": {
+          "filename": "BraveBrowserStandaloneBetaSetup32.exe",
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.96.50/BraveBrowserStandaloneBetaSetup32.exe"
+        },
+        "arm64": {
+          "filename": "BraveBrowserStandaloneBetaSetupArm64.exe",
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.96.50/BraveBrowserStandaloneBetaSetupArm64.exe"
+        }
+      }
+    },
+    "nightly": {
+      "version": "1.97.27",
+      "published": "2026-09-11T13:43:49Z",
+      "chrome": "153.0.8010.37",
+      "release": "https://github.com/brave/brave-browser/releases/tag/v1.97.27",
+      "files": {
+        "x64": {
+          "filename": "BraveBrowserStandaloneNightlySetup.exe",
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.27/BraveBrowserStandaloneNightlySetup.exe"
+        },
+        "x86": {
+          "filename": "BraveBrowserStandaloneNightlySetup32.exe",
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.27/BraveBrowserStandaloneNightlySetup32.exe"
+        },
+        "arm64": {
+          "filename": "BraveBrowserStandaloneNightlySetupArm64.exe",
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.27/BraveBrowserStandaloneNightlySetupArm64.exe"
+        }
+      }
+    }
+  }
+}
