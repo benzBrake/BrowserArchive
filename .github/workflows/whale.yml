@@ -121,6 +121,10 @@ jobs:
           EOF
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/whale.json
-          git commit -m "chore: update whale.json to ${VERSION}" || exit 0
-          git push
+          git add ../data/whale.json
+          if git diff --cached --quiet; then
+            echo "data/whale.json unchanged, skipping commit"
+          else
+            git commit -m "chore: update whale.json to ${VERSION}"
+            git push
+          fi
