@@ -1,0 +1,35 @@
+name: Helium Archive
+
+on:
+  schedule:
+    - cron: "0 17 * * *" # daily 01:00 Beijing time
+    - cron: "0 5 * * *" # daily 13:00 Beijing time
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: helium-archive
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Scrape latest Helium Windows release
+        run: bash scripts/helium.sh
+
+      - name: Commit Helium data file
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/helium.json
+          if git diff --cached --quiet; then
+            echo "Helium data unchanged, skipping commit"
+          else
+            git commit -m "chore: update helium.json"
+            git push
+          fi
