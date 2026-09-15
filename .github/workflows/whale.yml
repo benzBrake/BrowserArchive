@@ -87,12 +87,12 @@ jobs:
             SHA256SUMS.txt
 
       - name: Update data/whale.json
-        if: steps.check.outputs.updated == 'true'
         env:
           VERSION: ${{ steps.build.outputs.version }}
           ITEM_URL: ${{ steps.upload.outputs.item_url }}
         run: |
           cd build
+          ITEM_URL="${ITEM_URL:-https://archive.org/details/whale-archive-${VERSION}}"
           python3 - "$VERSION" "$ITEM_URL" <<'EOF'
           import datetime, hashlib, json, os, sys
 
