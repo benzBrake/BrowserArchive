@@ -35,32 +35,19 @@ def version(product):
     return max(versions, key=lambda v: tuple(map(int, v.split('.'))))
 
 def files(directory, ver):
-    # FTP uses both flat listings (opera/desktop) and version subdirectories
-    # (opera/desktop/<version>, opera-developer/<version>); inspect three levels.
-    root = FTP + directory.strip('/') + '/'
-    queue, candidates = [(root, 0, False)], []
-    seen = set()
-    while queue:
-        url, depth, in_version = queue.pop(0)
-        if url in seen or depth > 3: continue
-        seen.add(url)
-        html = get(url)
-        for h in re.findall(r'href=["\']([^"\']+)["\']', html, re.I):
-            name = urllib.parse.unquote(h)
-            if name in ('../', './') or h.startswith('?'): continue
-            if (in_version or ver in name) and not h.endswith('/'):
-                candidates.append((urllib.parse.urljoin(url, h), name))
-            elif h.endswith('/') and depth < 3 and (ver in name or directory == 'opera'):
-                queue.append((urllib.parse.urljoin(url, h), depth + 1, in_version or ver in name))
+    path = f"opera/desktop/{ver}" if directory == "opera" else f"{directory}/{ver}"
+    base = f"{FTP}{path}/win/"
     out = {}
     for arch, suffix in {"x64": "_x64", "arm64": "_arm64", "x86": None}.items():
-        hits = [(u, n) for u, n in candidates
-                if n.lower().endswith((".exe", ".msi")) and
-                ((suffix and suffix in n.lower()) or (suffix is None and n.lower().endswith("_setup.exe")))]
-        # Opera's default Windows installer (without an arch suffix) is x86.
-        if hits:
-            url, name = hits[0]
-            out[arch] = {"filename": name, "url": url}
+        stem = "Opera_GX" if directory == "opera_gx" else ("Opera_Developer" if directory == "opera-developer" else "Opera")
+        filename = f"{stem}_{ver}_Setup{suffix or ''}.exe"
+        url = base + filename
+        req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "Mozilla/5.0"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as response:
+                if response.status < 400: out[arch] = {"filename": filename, "url": url}
+        except Exception as e:
+            if arch != "arm64": print(f"warn: {url}: {e}")
     if not out: raise RuntimeError(f"no Windows installers for {directory} {ver}")
     return out
 
