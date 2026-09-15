@@ -1,0 +1,57 @@
+{
+  "name": "Brave Origin",
+  "version": "1.95.101",
+  "date": "2026-09-15",
+  "source": "https://versions.brave.com/latest/brave-versions.json",
+  "channels": {
+    "stable": {
+      "version": "1.95.101",
+      "published": "2026-09-11T03:31:20Z",
+      "chrome": "153.0.8010.37",
+      "files": {
+        "x64": {
+          "filename": "BraveOriginStandaloneSetup.exe",
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.95.101/BraveOriginStandaloneSetup.exe"
+        },
+        "x86": {
+          "filename": "BraveOriginStandaloneSetup32.exe",
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.95.101/BraveOriginStandaloneSetup32.exe"
+        },
+        "arm64": {
+          "filename": "BraveOriginStandaloneSetupArm64.exe",
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.95.101/BraveOriginStandaloneSetupArm64.exe"
+        }
+      }
+    },
+    "beta": {
+      "version": "1.96.50",
+      "published": "2026-09-10T05:24:03Z",
+      "chrome": "153.0.8010.37",
+      "files": {
+        "x64": {
+          "filename": "BraveOriginStandaloneBetaSetup.exe",
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.96.50/BraveOriginStandaloneBetaSetup.exe"
+        },
+        "x86": {
+          "filename": "BraveOriginStandaloneBetaSetup32.exe",
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.96.50/BraveOriginStandaloneBetaSetup32.exe"
+        },
+        "arm64": {
+          "filename": "BraveOriginStandaloneBetaSetupArm64.exe",
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.96.50/BraveOriginStandaloneBetaSetupArm64.exe"
+        }
+      }
+    },
+    "nightly": {
+      "version": "1.97.29",
+      "published": "2026-09-11T17:25:47Z",
+      "chrome": "153.0.8010.37",
+      "files": {
+        "x64": {
+          "filename": "BraveOriginStandaloneNightlySetup.exe",
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.29/BraveOriginStandaloneNightlySetup.exe"
+        }
+      }
+    }
+  }
+}

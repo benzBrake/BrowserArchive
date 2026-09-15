@@ -8,7 +8,6 @@
       "version": "1.95.101",
       "published": "2026-09-11T03:31:20Z",
       "chrome": "153.0.8010.37",
-      "release": "https://github.com/brave/brave-browser/releases/tag/v1.95.101",
       "files": {
         "x64": {
           "filename": "BraveBrowserStandaloneSetup.exe",
@@ -28,7 +27,6 @@
       "version": "1.96.50",
       "published": "2026-09-10T05:24:03Z",
       "chrome": "153.0.8010.37",
-      "release": "https://github.com/brave/brave-browser/releases/tag/v1.96.50",
       "files": {
         "x64": {
           "filename": "BraveBrowserStandaloneBetaSetup.exe",
@@ -48,7 +46,6 @@
       "version": "1.97.27",
       "published": "2026-09-11T13:43:49Z",
       "chrome": "153.0.8010.37",
-      "release": "https://github.com/brave/brave-browser/releases/tag/v1.97.27",
       "files": {
         "x64": {
           "filename": "BraveBrowserStandaloneNightlySetup.exe",

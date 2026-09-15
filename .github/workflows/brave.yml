@@ -19,18 +19,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Scrape latest Windows versions and generate data/brave.json
+      - name: Scrape latest Windows versions and generate data/brave.json + data/brave-origin.json
         run: |
           bash scripts/brave.sh
 
-      - name: Commit data/brave.json
+      - name: Commit Brave data files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/brave.json
+          git add data/brave.json data/brave-origin.json
           if git diff --cached --quiet; then
-            echo "data/brave.json unchanged, skipping commit"
+            echo "Brave data unchanged, skipping commit"
           else
-            git commit -m "chore: update brave.json"
+            git commit -m "chore: update brave.json and brave-origin.json"
             git push
           fi
