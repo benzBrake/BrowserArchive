@@ -3,5 +3,11 @@
   "version": "6.7.3",
   "date": "2026-09-15",
   "source": "https://github.com/BrowserWorks/waterfox/releases/tag/6.7.3",
-  "files": []
+  "files": [
+    {"filename": "Waterfox Setup 6.7.3.exe", "url": "https://cdn.waterfox.com/waterfox/releases/6.7.3/WINNT_x86_64/Waterfox%20Setup%206.7.3.exe"},
+    {"filename": "Waterfox Setup 6.7.3.exe", "url": "https://cdn.waterfox.com/waterfox/releases/6.7.3/WINNT_aarch64/Waterfox%20Setup%206.7.3.exe"},
+    {"filename": "Waterfox 6.7.3.dmg", "url": "https://cdn.waterfox.com/waterfox/releases/6.7.3/Darwin_x86_64-aarch64/Waterfox%206.7.3.dmg"},
+    {"filename": "waterfox-6.7.3.tar.bz2", "url": "https://cdn.waterfox.com/waterfox/releases/6.7.3/Linux_x86_64/waterfox-6.7.3.tar.bz2"},
+    {"filename": "waterfox-6.7.3.tar.bz2", "url": "https://cdn.waterfox.com/waterfox/releases/6.7.3/Linux_aarch64/waterfox-6.7.3.tar.bz2"}
+  ]
 }

@@ -13,7 +13,7 @@ fi
 PY="$(command -v uv >/dev/null 2>&1 && echo 'uv run --no-project python' || echo 'python3')"
 
 $PY - <<'EOF'
-import datetime, json, os, urllib.request
+import datetime, json, os, re, urllib.request, urllib.parse
 
 API = "https://api.github.com/repos/BrowserWorks/waterfox/releases/latest"
 request = urllib.request.Request(API, headers={"Accept": "application/vnd.github+json", "User-Agent": "BrowserArchive"})
@@ -30,6 +30,18 @@ for asset in release.get("assets", []):
     if name.lower().endswith((".exe", ".msi", ".zip", ".dmg", ".pkg", ".tar.bz2")):
         if asset.get("browser_download_url"):
             files.append({"filename": name, "url": asset["browser_download_url"]})
+# Waterfox publishes binary downloads on its CDN rather than as GitHub assets.
+page_req = urllib.request.Request("https://www.waterfox.com/download/", headers={"User-Agent": "BrowserArchive"})
+with urllib.request.urlopen(page_req, timeout=60) as response:
+    page = response.read().decode("utf-8", "replace")
+for url in dict.fromkeys(re.findall(r'https://cdn\.waterfox\.com/[^" ]+', page)):
+    url = url.replace("&amp;", "&")
+    if f"/releases/{version}/" not in url:
+        continue
+    name = urllib.parse.unquote(url.rsplit("/", 1)[-1])
+    if name.lower().endswith((".exe", ".msi", ".zip", ".dmg", ".pkg", ".tar.bz2")):
+        files.append({"filename": name, "url": url})
+files = list({item["url"]: item for item in files}.values())
 out = {
     "name": "Waterfox",
     "version": version,
