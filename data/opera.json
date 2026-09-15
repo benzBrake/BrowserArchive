@@ -1,0 +1,8 @@
+{
+  "schema_version": 2,
+  "name": "Opera",
+  "version": "0.0.0.0",
+  "date": "1970-01-01",
+  "source": "https://autoupdate.geo.opera.com/api/verify",
+  "products": {}
+}

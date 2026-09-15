@@ -1,0 +1,23 @@
+name: Opera Archive
+on:
+  schedule:
+    - cron: "0 17 * * *" # daily 01:00 Beijing time
+    - cron: "0 5 * * *" # daily 13:00 Beijing time
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency:
+  group: opera-archive
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Generate Opera archive
+        run: bash scripts/opera.sh
+      - name: Commit Opera data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/opera.json
+          if git diff --cached --quiet; then echo "Opera data unchanged"; else git commit -m "chore: update opera.json"; git push; fi
