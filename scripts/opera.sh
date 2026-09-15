@@ -36,13 +36,13 @@ def version(product):
 
 def files(directory, ver):
     # FTP uses both flat listings (opera/desktop) and version subdirectories
-    # (opera-developer/<version>, opera_gx/<version>); inspect two levels.
+    # (opera/desktop/<version>, opera-developer/<version>); inspect three levels.
     root = FTP + directory.strip('/') + '/'
     queue, candidates = [(root, 0)], []
     seen = set()
     while queue:
         url, depth = queue.pop(0)
-        if url in seen or depth > 2: continue
+        if url in seen or depth > 3: continue
         seen.add(url)
         html = get(url)
         for h in re.findall(r'href=["\']([^"\']+)["\']', html, re.I):
@@ -50,7 +50,7 @@ def files(directory, ver):
             if name in ('../', './') or h.startswith('?'): continue
             if ver in name and not h.endswith('/'):
                 candidates.append(name)
-            elif h.endswith('/') and depth < 2 and (ver in name or directory == 'opera'):
+            elif h.endswith('/') and depth < 3 and (ver in name or directory == 'opera'):
                 queue.append((urllib.parse.urljoin(url, h), depth + 1))
     out = {}
     for arch, pats in {"x64": ("x64", "64"), "x86": ("x86", "32", "ia32")}.items():
