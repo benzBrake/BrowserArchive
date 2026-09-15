@@ -38,7 +38,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if gh release view "v${{ steps.build.outputs.version }}" -R "${{ github.repository }}" >/dev/null 2>&1; then
+          # tags are namespaced per browser (<browser>-v<version>) so a
+          # version collision with another browser can't alias this check
+          if gh release view "whale-v${{ steps.build.outputs.version }}" -R "${{ github.repository }}" >/dev/null 2>&1; then
             echo "updated=false" >> "$GITHUB_OUTPUT"
           else
             echo "updated=true" >> "$GITHUB_OUTPUT"
@@ -67,7 +69,7 @@ jobs:
         run: |
           cd build
           sha256sum WhaleSetupX86.exe WhaleSetupX64.exe WhaleSetupARM64.exe > SHA256SUMS.txt
-          gh release create "v${VERSION}" \
+          gh release create "whale-v${VERSION}" \
             -R "${{ github.repository }}" \
             --title "Naver Whale ${VERSION}" \
             --notes "Naver Whale ${VERSION}
