@@ -54,6 +54,7 @@ jobs:
           ./scripts/upload_ia.sh whale "${{ steps.build.outputs.version }}" build \
             WhaleSetupX86.exe WhaleSetupX64.exe WhaleSetupARM64.exe | tee ia_output.txt
           echo "item_url=$(grep '^ITEM_URL=' ia_output.txt | cut -d= -f2-)" >> "$GITHUB_OUTPUT"
+          grep '^FILE_URL_' ia_output.txt >> "$GITHUB_ENV"
 
       - name: Create metadata-only release
         if: steps.check.outputs.updated == 'true'
@@ -69,8 +70,57 @@ jobs:
             --title "Naver Whale ${VERSION}" \
             --notes "Naver Whale ${VERSION}
 
-          - Archive: ${ITEM_URL:-https://archive.org/details/naver-whale-${VERSION}}
+          - Archive: ${ITEM_URL:-https://archive.org/details/whale-archive-${VERSION}}
           - Source: https://installer-whale.pstatic.net/downloads/sa_installers/
 
-          $(cat SHA256SUMS.txt)" \
+          ## Downloads
+
+          - [WhaleSetupX86.exe](${FILE_URL_WhaleSetupX86})
+          - [WhaleSetupX64.exe](${FILE_URL_WhaleSetupX64})
+          - [WhaleSetupARM64.exe](${FILE_URL_WhaleSetupARM64})
+
+          ## SHA256
+
+          \`\`\`
+          $(cat SHA256SUMS.txt)
+          \`\`\`" \
             SHA256SUMS.txt
+
+      - name: Update data/whale.json
+        if: steps.check.outputs.updated == 'true'
+        env:
+          VERSION: ${{ steps.build.outputs.version }}
+          ITEM_URL: ${{ steps.upload.outputs.item_url }}
+        run: |
+          cd build
+          python3 - "$VERSION" "$ITEM_URL" <<'EOF'
+          import datetime, hashlib, json, os, sys
+
+          version, item_url = sys.argv[1], sys.argv[2]
+          files = {}
+          for arch, name in (("x86", "WhaleSetupX86.exe"), ("x64", "WhaleSetupX64.exe"), ("arm64", "WhaleSetupARM64.exe")):
+              with open(name, "rb") as f:
+                  digest = hashlib.sha256(f.read()).hexdigest()
+              files[arch] = {
+                  "filename": name,
+                  "sha256": digest,
+                  "url": f"https://archive.org/download/whale-archive-{version}/{name}",
+              }
+          data = {
+              "name": "Naver Whale",
+              "version": version,
+              "date": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d"),
+              "source": "https://installer-whale.pstatic.net/downloads/sa_installers/",
+              "archive_item": item_url,
+              "files": files,
+          }
+          os.makedirs("../data", exist_ok=True)
+          with open("../data/whale.json", "w", encoding="utf-8") as f:
+              json.dump(data, f, indent=2, ensure_ascii=False)
+              f.write("\n")
+          EOF
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/whale.json
+          git commit -m "chore: update whale.json to ${VERSION}" || exit 0
+          git push

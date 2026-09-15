@@ -41,3 +41,6 @@ ia upload "$ITEM_ID" "${FILES[@]}" \
   --checksum
 
 echo "ITEM_URL=https://archive.org/details/${ITEM_ID}"
+for f in "$@"; do
+  echo "FILE_URL_${f%%.*}=https://archive.org/download/${ITEM_ID}/${f}"
+done
