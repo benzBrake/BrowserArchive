@@ -2,7 +2,8 @@ name: Whale Archive
 
 on:
   schedule:
-    - cron: "0 0 * * *" # daily 08:00 Beijing time
+    - cron: "0 17 * * *" # daily 01:00 Beijing time
+    - cron: "0 5 * * *" # daily 13:00 Beijing time
   workflow_dispatch:
 
 permissions:
