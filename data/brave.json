@@ -108,52 +108,24 @@
       }
     },
     "nightly": {
-      "version": "1.97.31",
-      "published": "2026-09-14T13:45:05Z",
+      "version": "1.97.37",
+      "published": "2026-09-15T17:26:49Z",
       "chrome": "153.0.8010.37",
       "files": {
         "x64": {
           "filename": "BraveBrowserStandaloneNightlySetup.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.31/BraveBrowserStandaloneNightlySetup.exe"
-        },
-        "x86": {
-          "filename": "BraveBrowserStandaloneNightlySetup32.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.31/BraveBrowserStandaloneNightlySetup32.exe"
-        },
-        "arm64": {
-          "filename": "BraveBrowserStandaloneNightlySetupArm64.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.31/BraveBrowserStandaloneNightlySetupArm64.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.37/BraveBrowserStandaloneNightlySetup.exe"
         }
       },
       "packages": {
         "x64": {
           "installer": {
             "filename": "BraveBrowserStandaloneNightlySetup.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.31/BraveBrowserStandaloneNightlySetup.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.37/BraveBrowserStandaloneNightlySetup.exe"
           },
           "zip": {
-            "filename": "brave-v1.97.31-win32-x64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.31/brave-v1.97.31-win32-x64.zip"
-          }
-        },
-        "x86": {
-          "installer": {
-            "filename": "BraveBrowserStandaloneNightlySetup32.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.31/BraveBrowserStandaloneNightlySetup32.exe"
-          },
-          "zip": {
-            "filename": "brave-v1.97.31-win32-ia32.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.31/brave-v1.97.31-win32-ia32.zip"
-          }
-        },
-        "arm64": {
-          "installer": {
-            "filename": "BraveBrowserStandaloneNightlySetupArm64.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.31/BraveBrowserStandaloneNightlySetupArm64.exe"
-          },
-          "zip": {
-            "filename": "brave-v1.97.31-win32-arm64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.31/brave-v1.97.31-win32-arm64.zip"
+            "filename": "brave-v1.97.37-win32-x64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.37/brave-v1.97.37-win32-x64.zip"
           }
         }
       }
