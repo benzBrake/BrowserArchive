@@ -1,0 +1,36 @@
+{
+  "name": "Chrome Plus",
+  "version": "1.18.2",
+  "date": "2026-09-16",
+  "source": "https://github.com/Bush2021/chrome_plus/releases/tag/1.18.2",
+  "release": {
+    "tag_name": "1.18.2",
+    "name": "1.18.2",
+    "published_at": "2026-07-30T04:09:56Z",
+    "created_at": "2026-07-30T04:09:43Z",
+    "html_url": "https://github.com/Bush2021/chrome_plus/releases/tag/1.18.2",
+    "body": "## Fix\n* 32f51e0 fix: fix double-click tab close mis-gestures (#280) by @ziboh\n\n    > Fixes follow-up window actions after double-clicking a tab closed: caption buttons now respond on the first click, and window dragging stops when the mouse button is released.\n    >\n    > Also prevents a quick “new tab, then tab” sequence from being mistaken for a double-click and closing an unintended tab.\n\n* b8f785d fix: hide update errors on Chrome 151 by @Bush2021\n\n    > Restores hiding update errors on Chrome 151's About page after Chromium migrated the page from Polymer to Lit.\n    >\n    > This release targets the Lit bindings introduced in Chrome 151. The previous Polymer matching rules have been removed, so update errors are no longer hidden on Chrome 150 and earlier.\n\n**Full Changelog**: https://github.com/Bush2021/chrome_plus/compare/1.18.1...1.18.2",
+    "prerelease": false,
+    "draft": false
+  },
+  "files": [
+    {
+      "filename": "Chrome++_v1.18.2_x86_x64_arm64.7z",
+      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.18.2/Chrome%2B%2B_v1.18.2_x86_x64_arm64.7z",
+      "size": 183612,
+      "content_type": "application/x-7z-compressed",
+      "download_count": 3573,
+      "created_at": "2026-07-30T04:09:55Z",
+      "updated_at": "2026-07-30T04:09:56Z"
+    },
+    {
+      "filename": "setdll.7z",
+      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.18.2/setdll.7z",
+      "size": 274229,
+      "content_type": "application/x-7z-compressed",
+      "download_count": 1057,
+      "created_at": "2026-07-30T04:09:55Z",
+      "updated_at": "2026-07-30T04:09:56Z"
+    }
+  ]
+}
