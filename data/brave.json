@@ -2,7 +2,7 @@
   "schema_version": 2,
   "name": "Brave",
   "version": "1.95.101",
-  "date": "2026-09-15",
+  "date": "2026-09-16",
   "source": "https://versions.brave.com/latest/brave-versions.json",
   "channels": {
     "stable": {
