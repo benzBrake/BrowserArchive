@@ -1,32 +1,32 @@
 {
   "name": "Helium",
-  "version": "0.17.0.1",
-  "date": "2026-09-16",
-  "source": "https://github.com/imputnet/helium-windows/releases/tag/0.17.0.1",
+  "version": "0.17.1.1",
+  "date": "2026-09-17",
+  "source": "https://github.com/imputnet/helium-windows/releases/tag/0.17.1.1",
   "files": [
     {
-      "filename": "helium_0.17.0.1_arm64-installer.exe",
-      "url": "https://github.com/imputnet/helium-windows/releases/download/0.17.0.1/helium_0.17.0.1_arm64-installer.exe"
+      "filename": "helium_0.17.1.1_arm64-installer.exe",
+      "url": "https://github.com/imputnet/helium-windows/releases/download/0.17.1.1/helium_0.17.1.1_arm64-installer.exe"
     },
     {
-      "filename": "helium_0.17.0.1_arm64-mini-installer.exe",
-      "url": "https://github.com/imputnet/helium-windows/releases/download/0.17.0.1/helium_0.17.0.1_arm64-mini-installer.exe"
+      "filename": "helium_0.17.1.1_arm64-mini-installer.exe",
+      "url": "https://github.com/imputnet/helium-windows/releases/download/0.17.1.1/helium_0.17.1.1_arm64-mini-installer.exe"
     },
     {
-      "filename": "helium_0.17.0.1_arm64-windows.zip",
-      "url": "https://github.com/imputnet/helium-windows/releases/download/0.17.0.1/helium_0.17.0.1_arm64-windows.zip"
+      "filename": "helium_0.17.1.1_arm64-windows.zip",
+      "url": "https://github.com/imputnet/helium-windows/releases/download/0.17.1.1/helium_0.17.1.1_arm64-windows.zip"
     },
     {
-      "filename": "helium_0.17.0.1_x64-installer.exe",
-      "url": "https://github.com/imputnet/helium-windows/releases/download/0.17.0.1/helium_0.17.0.1_x64-installer.exe"
+      "filename": "helium_0.17.1.1_x64-installer.exe",
+      "url": "https://github.com/imputnet/helium-windows/releases/download/0.17.1.1/helium_0.17.1.1_x64-installer.exe"
     },
     {
-      "filename": "helium_0.17.0.1_x64-mini-installer.exe",
-      "url": "https://github.com/imputnet/helium-windows/releases/download/0.17.0.1/helium_0.17.0.1_x64-mini-installer.exe"
+      "filename": "helium_0.17.1.1_x64-mini-installer.exe",
+      "url": "https://github.com/imputnet/helium-windows/releases/download/0.17.1.1/helium_0.17.1.1_x64-mini-installer.exe"
     },
     {
-      "filename": "helium_0.17.0.1_x64-windows.zip",
-      "url": "https://github.com/imputnet/helium-windows/releases/download/0.17.0.1/helium_0.17.0.1_x64-windows.zip"
+      "filename": "helium_0.17.1.1_x64-windows.zip",
+      "url": "https://github.com/imputnet/helium-windows/releases/download/0.17.1.1/helium_0.17.1.1_x64-windows.zip"
     }
   ]
 }
