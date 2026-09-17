@@ -1,20 +1,20 @@
 {
   "name": "Floorp",
-  "version": "12.17.2",
+  "version": "12.18.0",
   "date": "2026-09-17",
-  "source": "https://github.com/Floorp-Projects/Floorp/releases/tag/v12.17.2",
+  "source": "https://github.com/Floorp-Projects/Floorp/releases/tag/v12.18.0",
   "files": [
     {
       "filename": "floorp-stub.installer.exe",
-      "url": "https://github.com/Floorp-Projects/Floorp/releases/download/v12.17.2/floorp-stub.installer.exe"
+      "url": "https://github.com/Floorp-Projects/Floorp/releases/download/v12.18.0/floorp-stub.installer.exe"
     },
     {
       "filename": "floorp-windows-x86_64.installer.exe",
-      "url": "https://github.com/Floorp-Projects/Floorp/releases/download/v12.17.2/floorp-windows-x86_64.installer.exe"
+      "url": "https://github.com/Floorp-Projects/Floorp/releases/download/v12.18.0/floorp-windows-x86_64.installer.exe"
     },
     {
       "filename": "floorp-windows-x86_64.portable.7z",
-      "url": "https://github.com/Floorp-Projects/Floorp-Portable-v2/releases/download/v12.17.2/floorp-windows-x86_64.portable.7z"
+      "url": "https://github.com/Floorp-Projects/Floorp-Portable-v2/releases/download/v12.18.0/floorp-windows-x86_64.portable.7z"
     }
   ]
 }
