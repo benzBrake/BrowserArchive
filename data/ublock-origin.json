@@ -1,0 +1,18 @@
+{
+  "addons": {
+    "uBlock0@raymondhill.net": {
+      "updates": [
+        {
+          "update_hash": "sha512:533051F62DADAB3FE6FF64FA6499A9B9F2ED97A904D4B6B5814C7DB70E9FBFC6E6869A5BF686CC1EF9439682169080CE2DD246CD6978D2138E232730CE6D6DC6",
+          "version": "1.75.0",
+          "update_link": "https://v6.gh-proxy.org/https://github.com/gorhill/uBlock/releases/download/1.75.0/uBlock0_1.75.0.firefox.signed.xpi",
+          "applications": {
+            "gecko": {
+              "strict_min_version": "115.0"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
