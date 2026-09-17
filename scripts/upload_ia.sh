@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Upload browser installers to the Internet Archive item "<browser>-archive-<version>".
+# Upload browser files to the Internet Archive item "<browser>-archive-<version>".
 # Auth comes from the IA_ACCESS_KEY / IA_SECRET environment variables
 # (generate keys at https://archive.org/account/s3.php).
 # Usage: ./scripts/upload_ia.sh BROWSER VERSION WORK_DIR FILE [FILE...]
@@ -13,6 +13,8 @@ shift 3
 [[ $# -gt 0 ]] || { echo "no files to upload" >&2; exit 1; }
 
 ITEM_ID="${BROWSER}-archive-${VERSION}"
+TITLE="${IA_TITLE:-${BROWSER} ${VERSION} installers (archived)}"
+DESCRIPTION="${IA_DESCRIPTION:-${BROWSER} ${VERSION} official installers, archived from the official source for historical reference. All rights belong to the respective copyright holder.}"
 
 if [[ -z "${IA_ACCESS_KEY:-}" || -z "${IA_SECRET:-}" ]]; then
   echo "IA_ACCESS_KEY and IA_SECRET must be set" >&2
@@ -39,8 +41,8 @@ done
 ia upload "$ITEM_ID" "${FILES[@]}" \
   --metadata "collection:opensource_media" \
   --metadata "mediatype:software" \
-  --metadata "title:${BROWSER} ${VERSION} installers (archived)" \
-  --metadata "description:${BROWSER} ${VERSION} official installers, archived from the official source for historical reference. All rights belong to the respective copyright holder." \
+  --metadata "title:${TITLE}" \
+  --metadata "description:${DESCRIPTION}" \
   --metadata "date:$(date +%Y-%m-%d)" \
   --checksum
 

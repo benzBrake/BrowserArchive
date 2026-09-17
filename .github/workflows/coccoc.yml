@@ -1,0 +1,187 @@
+name: Coc Coc Archive
+
+on:
+  schedule:
+    - cron: "0 17 * * *" # daily 01:00 Beijing time
+    - cron: "0 5 * * *" # daily 13:00 Beijing time
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: coccoc-archive
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Resolve latest Coc Coc version
+        id: metadata
+        run: |
+          chmod +x scripts/coccoc.sh
+          metadata="$(./scripts/coccoc.sh metadata)"
+          while IFS='=' read -r key value; do
+            case "$key" in
+              VERSION) echo "version=$value" >> "$GITHUB_OUTPUT" ;;
+              DOWNLOAD_URL) echo "download_url=$value" >> "$GITHUB_OUTPUT" ;;
+              DOWNLOAD_SHA256) echo "download_sha256=$value" >> "$GITHUB_OUTPUT" ;;
+            esac
+          done <<< "$metadata"
+
+      - name: Check existing archive state
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.metadata.outputs.version }}
+        run: |
+          if gh release view "coccoc-v${VERSION}" -R "${{ github.repository }}" >/dev/null 2>&1; then
+            echo "release_exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "release_exists=false" >> "$GITHUB_OUTPUT"
+          fi
+          if python3 - "$VERSION" <<'PY'
+          import json
+          import pathlib
+          import sys
+
+          path = pathlib.Path("data/coccoc.json")
+          try:
+              current = json.loads(path.read_text(encoding="utf-8")).get("version")
+          except (FileNotFoundError, json.JSONDecodeError):
+              current = None
+          raise SystemExit(0 if current == sys.argv[1] else 1)
+          PY
+          then
+            echo "json_current=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "json_current=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: astral-sh/setup-uv@v5
+        if: steps.check.outputs.release_exists == 'false'
+
+      - name: Install build tools
+        if: steps.check.outputs.release_exists == 'false'
+        run: sudo apt-get update && sudo apt-get install -y p7zip-full
+
+      - name: Build Coc Coc ZIP
+        if: steps.check.outputs.release_exists == 'false'
+        env:
+          VERSION: ${{ steps.metadata.outputs.version }}
+          DOWNLOAD_URL: ${{ steps.metadata.outputs.download_url }}
+          DOWNLOAD_SHA256: ${{ steps.metadata.outputs.download_sha256 }}
+        run: |
+          build_metadata="$(./scripts/coccoc.sh build "$VERSION" "$DOWNLOAD_URL" "$DOWNLOAD_SHA256")"
+          while IFS='=' read -r key value; do
+            case "$key" in
+              ARCHIVE_NAME) echo "ARCHIVE_NAME=$value" >> "$GITHUB_ENV" ;;
+              ARCHIVE_SHA256) echo "ARCHIVE_SHA256=$value" >> "$GITHUB_ENV" ;;
+            esac
+          done <<< "$build_metadata"
+
+      - name: Recover archive metadata from existing release
+        if: steps.check.outputs.release_exists == 'true' && steps.check.outputs.json_current == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.metadata.outputs.version }}
+        run: |
+          mkdir -p build
+          gh release download "coccoc-v${VERSION}" -R "${{ github.repository }}" \
+            --pattern SHA256SUMS.txt --dir build --clobber
+          read -r archive_sha256 archive_name < build/SHA256SUMS.txt
+          expected_name="coccoc-${VERSION}-win-x64.zip"
+          archive_name="${archive_name#\*}"
+          if [[ ! "$archive_sha256" =~ ^[0-9a-f]{64}$ || "$archive_name" != "$expected_name" ]]; then
+            echo "Invalid SHA256SUMS.txt in coccoc-v${VERSION}" >&2
+            exit 1
+          fi
+          curl --fail --retry 3 --location --silent --show-error --head \
+            "https://archive.org/download/coccoc-archive-${VERSION}/${archive_name}" >/dev/null
+          echo "ARCHIVE_NAME=$archive_name" >> "$GITHUB_ENV"
+          echo "ARCHIVE_SHA256=$archive_sha256" >> "$GITHUB_ENV"
+
+      - name: Upload ZIP to Internet Archive
+        if: steps.check.outputs.release_exists == 'false'
+        env:
+          IA_ACCESS_KEY: ${{ secrets.IA_ACCESS_KEY }}
+          IA_SECRET: ${{ secrets.IA_SECRET }}
+          IA_TITLE: Cốc Cốc ${{ steps.metadata.outputs.version }} Windows x64 archive
+          IA_DESCRIPTION: Official Cốc Cốc ${{ steps.metadata.outputs.version }} Windows x64 application files, archived for historical reference. All rights belong to Cốc Cốc.
+          VERSION: ${{ steps.metadata.outputs.version }}
+        run: |
+          pip install --quiet internetarchive
+          chmod +x scripts/upload_ia.sh
+          ./scripts/upload_ia.sh coccoc "$VERSION" build "$ARCHIVE_NAME"
+
+      - name: Create metadata-only release
+        if: steps.check.outputs.release_exists == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.metadata.outputs.version }}
+        run: |
+          printf '%s  %s\n' "$ARCHIVE_SHA256" "$ARCHIVE_NAME" > build/SHA256SUMS.txt
+          item_url="https://archive.org/details/coccoc-archive-${VERSION}"
+          file_url="https://archive.org/download/coccoc-archive-${VERSION}/${ARCHIVE_NAME}"
+          gh release create "coccoc-v${VERSION}" \
+            -R "${{ github.repository }}" \
+            --title "Cốc Cốc ${VERSION}" \
+            --notes "Cốc Cốc ${VERSION} Windows x64 archive
+
+          - Archive: ${item_url}
+          - Source: https://update.coccoc.com/service/update2/json
+
+          ## Download
+
+          - [${ARCHIVE_NAME}](${file_url})
+
+          ## SHA256
+
+          \`\`\`
+          $(cat build/SHA256SUMS.txt)
+          \`\`\`" \
+            build/SHA256SUMS.txt
+
+      - name: Update data/coccoc.json
+        if: steps.check.outputs.release_exists == 'false' || steps.check.outputs.json_current == 'false'
+        env:
+          VERSION: ${{ steps.metadata.outputs.version }}
+        run: |
+          python3 - "$VERSION" "$ARCHIVE_NAME" "$ARCHIVE_SHA256" <<'PY'
+          import datetime
+          import json
+          import pathlib
+          import sys
+
+          version, filename, sha256 = sys.argv[1:]
+          item_id = f"coccoc-archive-{version}"
+          data = {
+              "name": "Cốc Cốc",
+              "version": version,
+              "date": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d"),
+              "source": "https://update.coccoc.com/service/update2/json",
+              "archive_item": f"https://archive.org/details/{item_id}",
+              "files": {
+                  "x64": {
+                      "filename": filename,
+                      "sha256": sha256,
+                      "url": f"https://archive.org/download/{item_id}/{filename}",
+                  }
+              },
+          }
+          path = pathlib.Path("data/coccoc.json")
+          path.parent.mkdir(parents=True, exist_ok=True)
+          path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/coccoc.json
+          if git diff --cached --quiet; then
+            echo "data/coccoc.json unchanged, skipping commit"
+          else
+            git commit -m "chore: update coccoc.json to ${VERSION}"
+            git push
+          fi
