@@ -23,13 +23,4 @@ jobs:
         run: bash scripts/floorp.sh
 
       - name: Commit Floorp data file
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/floorp.json
-          if git diff --cached --quiet; then
-            echo "Floorp data unchanged, skipping commit"
-          else
-            git commit -m "chore: update floorp.json"
-            git push
-          fi
+        run: bash scripts/commit_and_push.sh "chore: update floorp.json" data/floorp.json

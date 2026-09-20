@@ -25,13 +25,4 @@ jobs:
         run: bash scripts/ublock_origin.sh
 
       - name: Commit uBlock Origin update manifest
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/ublock-origin.json
-          if git diff --cached --quiet; then
-            echo "uBlock Origin update manifest unchanged, skipping commit"
-          else
-            git commit -m "chore: update ublock-origin.json"
-            git push
-          fi
+        run: bash scripts/commit_and_push.sh "chore: update ublock-origin.json" data/ublock-origin.json

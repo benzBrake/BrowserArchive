@@ -16,8 +16,4 @@ jobs:
       - name: Generate Opera archive
         run: bash scripts/opera.sh
       - name: Commit Opera data
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/opera.json
-          if git diff --cached --quiet; then echo "Opera data unchanged"; else git commit -m "chore: update opera.json"; git push; fi
+        run: bash scripts/commit_and_push.sh "chore: update opera.json" data/opera.json

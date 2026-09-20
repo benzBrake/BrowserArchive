@@ -17,13 +17,4 @@ jobs:
       - name: Scrape latest Chrome Plus release
         run: bash scripts/chrome_plus.sh
       - name: Commit Chrome Plus data file
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/chrome_plus.json
-          if git diff --cached --quiet; then
-            echo "Chrome Plus data unchanged, skipping commit"
-          else
-            git commit -m "chore: update chrome_plus.json"
-            git push
-          fi
+        run: bash scripts/commit_and_push.sh "chore: update chrome_plus.json" data/chrome_plus.json

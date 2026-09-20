@@ -176,12 +176,4 @@ jobs:
           path.parent.mkdir(parents=True, exist_ok=True)
           path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
           PY
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/coccoc.json
-          if git diff --cached --quiet; then
-            echo "data/coccoc.json unchanged, skipping commit"
-          else
-            git commit -m "chore: update coccoc.json to ${VERSION}"
-            git push
-          fi
+          bash scripts/commit_and_push.sh "chore: update coccoc.json to ${VERSION}" data/coccoc.json

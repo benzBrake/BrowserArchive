@@ -24,13 +24,4 @@ jobs:
           bash scripts/brave.sh
 
       - name: Commit Brave data files
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/brave.json data/brave-origin.json
-          if git diff --cached --quiet; then
-            echo "Brave data unchanged, skipping commit"
-          else
-            git commit -m "chore: update brave.json and brave-origin.json"
-            git push
-          fi
+        run: bash scripts/commit_and_push.sh "chore: update brave.json and brave-origin.json" data/brave.json data/brave-origin.json

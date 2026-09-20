@@ -21,13 +21,4 @@ jobs:
       - name: Scrape latest Waterfox release
         run: bash scripts/waterfox.sh
       - name: Commit Waterfox data file
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/waterfox.json
-          if git diff --cached --quiet; then
-            echo "Waterfox data unchanged, skipping commit"
-          else
-            git commit -m "chore: update waterfox.json"
-            git push
-          fi
+        run: bash scripts/commit_and_push.sh "chore: update waterfox.json" data/waterfox.json
