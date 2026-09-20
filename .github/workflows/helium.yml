@@ -23,4 +23,5 @@ jobs:
         run: bash scripts/helium.sh
 
       - name: Commit Helium data file
-        run: bash scripts/commit_and_push.sh "chore: update helium.json" data/helium.json
+        run: |
+          bash scripts/commit_and_push.sh "chore: update helium.json" data/helium.json

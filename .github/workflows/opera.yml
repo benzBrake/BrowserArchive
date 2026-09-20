@@ -16,4 +16,5 @@ jobs:
       - name: Generate Opera archive
         run: bash scripts/opera.sh
       - name: Commit Opera data
-        run: bash scripts/commit_and_push.sh "chore: update opera.json" data/opera.json
+        run: |
+          bash scripts/commit_and_push.sh "chore: update opera.json" data/opera.json

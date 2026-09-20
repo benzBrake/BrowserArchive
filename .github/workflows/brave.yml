@@ -24,4 +24,5 @@ jobs:
           bash scripts/brave.sh
 
       - name: Commit Brave data files
-        run: bash scripts/commit_and_push.sh "chore: update brave.json and brave-origin.json" data/brave.json data/brave-origin.json
+        run: |
+          bash scripts/commit_and_push.sh "chore: update brave.json and brave-origin.json" data/brave.json data/brave-origin.json

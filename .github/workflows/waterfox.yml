@@ -21,4 +21,5 @@ jobs:
       - name: Scrape latest Waterfox release
         run: bash scripts/waterfox.sh
       - name: Commit Waterfox data file
-        run: bash scripts/commit_and_push.sh "chore: update waterfox.json" data/waterfox.json
+        run: |
+          bash scripts/commit_and_push.sh "chore: update waterfox.json" data/waterfox.json

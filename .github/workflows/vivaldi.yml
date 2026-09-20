@@ -24,4 +24,5 @@ jobs:
           bash scripts/vivaldi.sh
 
       - name: Commit Vivaldi data file
-        run: bash scripts/commit_and_push.sh "chore: update vivaldi.json" data/vivaldi.json
+        run: |
+          bash scripts/commit_and_push.sh "chore: update vivaldi.json" data/vivaldi.json

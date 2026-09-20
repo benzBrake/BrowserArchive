@@ -25,4 +25,5 @@ jobs:
         run: bash scripts/ublock_origin.sh
 
       - name: Commit uBlock Origin update manifest
-        run: bash scripts/commit_and_push.sh "chore: update ublock-origin.json" data/ublock-origin.json
+        run: |
+          bash scripts/commit_and_push.sh "chore: update ublock-origin.json" data/ublock-origin.json

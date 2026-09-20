@@ -23,4 +23,5 @@ jobs:
         run: bash scripts/floorp.sh
 
       - name: Commit Floorp data file
-        run: bash scripts/commit_and_push.sh "chore: update floorp.json" data/floorp.json
+        run: |
+          bash scripts/commit_and_push.sh "chore: update floorp.json" data/floorp.json

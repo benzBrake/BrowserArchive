@@ -17,4 +17,5 @@ jobs:
       - name: Scrape latest Chrome Plus release
         run: bash scripts/chrome_plus.sh
       - name: Commit Chrome Plus data file
-        run: bash scripts/commit_and_push.sh "chore: update chrome_plus.json" data/chrome_plus.json
+        run: |
+          bash scripts/commit_and_push.sh "chore: update chrome_plus.json" data/chrome_plus.json
