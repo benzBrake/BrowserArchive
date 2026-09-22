@@ -48,18 +48,18 @@
     },
     "opera_gx": {
       "name": "Opera GX",
-      "version": "135.0.5973.153",
+      "version": "136.0.6008.50",
       "channels": {
         "stable": {
-          "version": "135.0.5973.153",
+          "version": "136.0.6008.50",
           "files": {
             "x64": {
-              "filename": "Opera_GX_135.0.5973.153_Setup_x64.exe",
-              "url": "https://get.opera.com/ftp/pub/opera_gx/135.0.5973.153/win/Opera_GX_135.0.5973.153_Setup_x64.exe"
+              "filename": "Opera_GX_136.0.6008.50_Setup_x64.exe",
+              "url": "https://get.opera.com/ftp/pub/opera_gx/136.0.6008.50/win/Opera_GX_136.0.6008.50_Setup_x64.exe"
             },
             "x86": {
-              "filename": "Opera_GX_135.0.5973.153_Setup.exe",
-              "url": "https://get.opera.com/ftp/pub/opera_gx/135.0.5973.153/win/Opera_GX_135.0.5973.153_Setup.exe"
+              "filename": "Opera_GX_136.0.6008.50_Setup.exe",
+              "url": "https://get.opera.com/ftp/pub/opera_gx/136.0.6008.50/win/Opera_GX_136.0.6008.50_Setup.exe"
             }
           },
           "source": "https://autoupdate.geo.opera.com/api/verify?product=Opera%20GX&version=0.0.0.0"
