@@ -23,7 +23,11 @@ git commit -m "$commit_message"
 
 for attempt in {1..5}; do
   git fetch origin main
-  git rebase origin/main
+  if ! git rebase --autostash origin/main; then
+    echo "Rebase failed; worktree status:" >&2
+    git status --short >&2
+    exit 1
+  fi
 
   if git push origin HEAD:main; then
     exit 0
