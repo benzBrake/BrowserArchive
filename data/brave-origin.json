@@ -2,7 +2,7 @@
   "schema_version": 2,
   "name": "Brave Origin",
   "version": "1.95.104",
-  "date": "2026-09-25",
+  "date": "2026-09-26",
   "source": "https://versions.brave.com/latest/brave-versions.json",
   "channels": {
     "stable": {
