@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "name": "Opera",
-  "date": "2026-09-25",
+  "date": "2026-09-26",
   "source": "https://autoupdate.geo.opera.com/api/verify",
   "products": {
     "opera": {
