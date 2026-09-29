@@ -1,24 +1,24 @@
 {
   "name": "Naver Whale",
-  "version": "4.39.410.14",
-  "date": "2026-09-28",
+  "version": "5.39.412.56",
+  "date": "2026-09-29",
   "source": "https://installer-whale.pstatic.net/downloads/sa_installers/",
-  "archive_item": "https://archive.org/details/whale-archive-4.39.410.14",
+  "archive_item": "https://archive.org/details/whale-archive-5.39.412.56",
   "files": {
     "x86": {
       "filename": "WhaleSetupX86.exe",
-      "sha256": "28201640dfa42cf749502fd30a6d922197cb1f2b67c9fed5a6ef4a2fd11b3d2c",
-      "url": "https://archive.org/download/whale-archive-4.39.410.14/WhaleSetupX86.exe"
+      "sha256": "304ef55246c05ca78e5cca282b5df073e9c9a35d4cb5c64de3f1786be79cddd1",
+      "url": "https://archive.org/download/whale-archive-5.39.412.56/WhaleSetupX86.exe"
     },
     "x64": {
       "filename": "WhaleSetupX64.exe",
-      "sha256": "ac03a1559cfed22afcc2c7330ffb4a127b965cabbc4ff96c0a9762123a759cd2",
-      "url": "https://archive.org/download/whale-archive-4.39.410.14/WhaleSetupX64.exe"
+      "sha256": "906f38e0c755afe7dbdef5b316bc21dc7dadf7bd1fe398ff2edacd8fb6523ab2",
+      "url": "https://archive.org/download/whale-archive-5.39.412.56/WhaleSetupX64.exe"
     },
     "arm64": {
       "filename": "WhaleSetupARM64.exe",
-      "sha256": "9a6300875f65d3d4668198d21881c0f915c538f725152e24a931a36b62c2d0d5",
-      "url": "https://archive.org/download/whale-archive-4.39.410.14/WhaleSetupARM64.exe"
+      "sha256": "3fabcbc90c177144377a6b9ed69a19610e2ae76ad58eacdcf139fbfb267a8fba",
+      "url": "https://archive.org/download/whale-archive-5.39.412.56/WhaleSetupARM64.exe"
     }
   }
 }
