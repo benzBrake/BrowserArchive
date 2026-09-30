@@ -1,28 +1,28 @@
 {
   "name": "Waterfox",
-  "version": "6.7.4",
+  "version": "6.7.5",
   "date": "2026-09-30",
-  "source": "https://github.com/BrowserWorks/waterfox/releases/tag/6.7.4",
+  "source": "https://github.com/BrowserWorks/waterfox/releases/tag/6.7.5",
   "files": [
     {
-      "filename": "Waterfox 6.7.4.dmg",
-      "url": "https://cdn.waterfox.com/waterfox/releases/6.7.4/Darwin_x86_64-aarch64/Waterfox%206.7.4.dmg"
+      "filename": "Waterfox 6.7.5.dmg",
+      "url": "https://cdn.waterfox.com/waterfox/releases/6.7.5/Darwin_x86_64-aarch64/Waterfox%206.7.5.dmg"
     },
     {
-      "filename": "Waterfox Setup 6.7.4.exe",
-      "url": "https://cdn.waterfox.com/waterfox/releases/6.7.4/WINNT_x86_64/Waterfox%20Setup%206.7.4.exe"
+      "filename": "Waterfox Setup 6.7.5.exe",
+      "url": "https://cdn.waterfox.com/waterfox/releases/6.7.5/WINNT_x86_64/Waterfox%20Setup%206.7.5.exe"
     },
     {
-      "filename": "Waterfox Setup 6.7.4.exe",
-      "url": "https://cdn.waterfox.com/waterfox/releases/6.7.4/WINNT_aarch64/Waterfox%20Setup%206.7.4.exe"
+      "filename": "Waterfox Setup 6.7.5.exe",
+      "url": "https://cdn.waterfox.com/waterfox/releases/6.7.5/WINNT_aarch64/Waterfox%20Setup%206.7.5.exe"
     },
     {
-      "filename": "waterfox-6.7.4.tar.bz2",
-      "url": "https://cdn.waterfox.com/waterfox/releases/6.7.4/Linux_x86_64/waterfox-6.7.4.tar.bz2"
+      "filename": "waterfox-6.7.5.tar.bz2",
+      "url": "https://cdn.waterfox.com/waterfox/releases/6.7.5/Linux_x86_64/waterfox-6.7.5.tar.bz2"
     },
     {
-      "filename": "waterfox-6.7.4.tar.bz2",
-      "url": "https://cdn.waterfox.com/waterfox/releases/6.7.4/Linux_aarch64/waterfox-6.7.4.tar.bz2"
+      "filename": "waterfox-6.7.5.tar.bz2",
+      "url": "https://cdn.waterfox.com/waterfox/releases/6.7.5/Linux_aarch64/waterfox-6.7.5.tar.bz2"
     }
   ]
 }
