@@ -6,22 +6,22 @@
   "products": {
     "opera": {
       "name": "Opera",
-      "version": "136.0.6008.80",
+      "version": "137.0.6036.39",
       "channels": {
         "stable": {
-          "version": "136.0.6008.80",
+          "version": "137.0.6036.39",
           "files": {
             "x64": {
-              "filename": "Opera_136.0.6008.80_Setup_x64.exe",
-              "url": "https://get.opera.com/ftp/pub/opera/desktop/136.0.6008.80/win/Opera_136.0.6008.80_Setup_x64.exe"
+              "filename": "Opera_137.0.6036.39_Setup_x64.exe",
+              "url": "https://get.opera.com/ftp/pub/opera/desktop/137.0.6036.39/win/Opera_137.0.6036.39_Setup_x64.exe"
             },
             "arm64": {
-              "filename": "Opera_136.0.6008.80_Setup_arm64.exe",
-              "url": "https://get.opera.com/ftp/pub/opera/desktop/136.0.6008.80/win/Opera_136.0.6008.80_Setup_arm64.exe"
+              "filename": "Opera_137.0.6036.39_Setup_arm64.exe",
+              "url": "https://get.opera.com/ftp/pub/opera/desktop/137.0.6036.39/win/Opera_137.0.6036.39_Setup_arm64.exe"
             },
             "x86": {
-              "filename": "Opera_136.0.6008.80_Setup.exe",
-              "url": "https://get.opera.com/ftp/pub/opera/desktop/136.0.6008.80/win/Opera_136.0.6008.80_Setup.exe"
+              "filename": "Opera_137.0.6036.39_Setup.exe",
+              "url": "https://get.opera.com/ftp/pub/opera/desktop/137.0.6036.39/win/Opera_137.0.6036.39_Setup.exe"
             }
           },
           "source": "https://autoupdate.geo.opera.com/api/verify?product=Opera&version=0.0.0.0"
@@ -67,5 +67,5 @@
       }
     }
   },
-  "version": "136.0.6008.80"
+  "version": "137.0.6036.39"
 }
