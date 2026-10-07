@@ -1,159 +1,131 @@
 {
   "schema_version": 2,
   "name": "Brave",
-  "version": "1.96.61",
+  "version": "1.97.56",
   "date": "2026-10-07",
   "source": "https://versions.brave.com/latest/brave-versions.json",
   "channels": {
     "stable": {
-      "version": "1.96.61",
-      "published": "2026-10-02T12:12:00Z",
-      "chrome": "154.0.8037.98",
+      "version": "1.97.56",
+      "published": "2026-10-07T03:18:14Z",
+      "chrome": "155.0.8059.40",
       "files": {
         "x64": {
           "filename": "BraveBrowserStandaloneSetup.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.96.61/BraveBrowserStandaloneSetup.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.56/BraveBrowserStandaloneSetup.exe"
         },
         "x86": {
           "filename": "BraveBrowserStandaloneSetup32.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.96.61/BraveBrowserStandaloneSetup32.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.56/BraveBrowserStandaloneSetup32.exe"
         },
         "arm64": {
           "filename": "BraveBrowserStandaloneSetupArm64.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.96.61/BraveBrowserStandaloneSetupArm64.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.56/BraveBrowserStandaloneSetupArm64.exe"
         }
       },
       "packages": {
         "x64": {
           "installer": {
             "filename": "BraveBrowserStandaloneSetup.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.96.61/BraveBrowserStandaloneSetup.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.56/BraveBrowserStandaloneSetup.exe"
           },
           "zip": {
-            "filename": "brave-v1.96.61-win32-x64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.96.61/brave-v1.96.61-win32-x64.zip"
+            "filename": "brave-v1.97.56-win32-x64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.56/brave-v1.97.56-win32-x64.zip"
           }
         },
         "x86": {
           "installer": {
             "filename": "BraveBrowserStandaloneSetup32.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.96.61/BraveBrowserStandaloneSetup32.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.56/BraveBrowserStandaloneSetup32.exe"
           },
           "zip": {
-            "filename": "brave-v1.96.61-win32-ia32.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.96.61/brave-v1.96.61-win32-ia32.zip"
+            "filename": "brave-v1.97.56-win32-ia32.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.56/brave-v1.97.56-win32-ia32.zip"
           }
         },
         "arm64": {
           "installer": {
             "filename": "BraveBrowserStandaloneSetupArm64.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.96.61/BraveBrowserStandaloneSetupArm64.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.56/BraveBrowserStandaloneSetupArm64.exe"
           },
           "zip": {
-            "filename": "brave-v1.96.61-win32-arm64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.96.61/brave-v1.96.61-win32-arm64.zip"
+            "filename": "brave-v1.97.56-win32-arm64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.56/brave-v1.97.56-win32-arm64.zip"
           }
         }
       }
     },
     "beta": {
-      "version": "1.98.47",
-      "published": "2026-10-01T05:33:16Z",
-      "chrome": "155.0.8059.30",
+      "version": "1.98.51",
+      "published": "2026-10-07T05:20:11Z",
+      "chrome": "155.0.8059.40",
       "files": {
         "x64": {
           "filename": "BraveBrowserStandaloneBetaSetup.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.98.47/BraveBrowserStandaloneBetaSetup.exe"
-        },
-        "x86": {
-          "filename": "BraveBrowserStandaloneBetaSetup32.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.98.47/BraveBrowserStandaloneBetaSetup32.exe"
-        },
-        "arm64": {
-          "filename": "BraveBrowserStandaloneBetaSetupArm64.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.98.47/BraveBrowserStandaloneBetaSetupArm64.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.98.51/BraveBrowserStandaloneBetaSetup.exe"
         }
       },
       "packages": {
         "x64": {
           "installer": {
             "filename": "BraveBrowserStandaloneBetaSetup.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.98.47/BraveBrowserStandaloneBetaSetup.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.98.51/BraveBrowserStandaloneBetaSetup.exe"
           },
           "zip": {
-            "filename": "brave-v1.98.47-win32-x64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.98.47/brave-v1.98.47-win32-x64.zip"
-          }
-        },
-        "x86": {
-          "installer": {
-            "filename": "BraveBrowserStandaloneBetaSetup32.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.98.47/BraveBrowserStandaloneBetaSetup32.exe"
-          },
-          "zip": {
-            "filename": "brave-v1.98.47-win32-ia32.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.98.47/brave-v1.98.47-win32-ia32.zip"
-          }
-        },
-        "arm64": {
-          "installer": {
-            "filename": "BraveBrowserStandaloneBetaSetupArm64.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.98.47/BraveBrowserStandaloneBetaSetupArm64.exe"
-          },
-          "zip": {
-            "filename": "brave-v1.98.47-win32-arm64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.98.47/brave-v1.98.47-win32-arm64.zip"
+            "filename": "brave-v1.98.51-win32-x64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.98.51/brave-v1.98.51-win32-x64.zip"
           }
         }
       }
     },
     "nightly": {
-      "version": "1.99.12",
-      "published": "2026-10-05T13:36:10Z",
+      "version": "1.99.20",
+      "published": "2026-10-07T13:33:11Z",
       "chrome": "155.0.8059.30",
       "files": {
         "x64": {
           "filename": "BraveBrowserStandaloneNightlySetup.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.99.12/BraveBrowserStandaloneNightlySetup.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.99.20/BraveBrowserStandaloneNightlySetup.exe"
         },
         "x86": {
           "filename": "BraveBrowserStandaloneNightlySetup32.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.99.12/BraveBrowserStandaloneNightlySetup32.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.99.20/BraveBrowserStandaloneNightlySetup32.exe"
         },
         "arm64": {
           "filename": "BraveBrowserStandaloneNightlySetupArm64.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.99.12/BraveBrowserStandaloneNightlySetupArm64.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.99.20/BraveBrowserStandaloneNightlySetupArm64.exe"
         }
       },
       "packages": {
         "x64": {
           "installer": {
             "filename": "BraveBrowserStandaloneNightlySetup.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.99.12/BraveBrowserStandaloneNightlySetup.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.99.20/BraveBrowserStandaloneNightlySetup.exe"
           },
           "zip": {
-            "filename": "brave-v1.99.12-win32-x64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.99.12/brave-v1.99.12-win32-x64.zip"
+            "filename": "brave-v1.99.20-win32-x64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.99.20/brave-v1.99.20-win32-x64.zip"
           }
         },
         "x86": {
           "installer": {
             "filename": "BraveBrowserStandaloneNightlySetup32.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.99.12/BraveBrowserStandaloneNightlySetup32.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.99.20/BraveBrowserStandaloneNightlySetup32.exe"
           },
           "zip": {
-            "filename": "brave-v1.99.12-win32-ia32.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.99.12/brave-v1.99.12-win32-ia32.zip"
+            "filename": "brave-v1.99.20-win32-ia32.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.99.20/brave-v1.99.20-win32-ia32.zip"
           }
         },
         "arm64": {
           "installer": {
             "filename": "BraveBrowserStandaloneNightlySetupArm64.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.99.12/BraveBrowserStandaloneNightlySetupArm64.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.99.20/BraveBrowserStandaloneNightlySetupArm64.exe"
           },
           "zip": {
-            "filename": "brave-v1.99.12-win32-arm64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.99.12/brave-v1.99.12-win32-arm64.zip"
+            "filename": "brave-v1.99.20-win32-arm64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.99.20/brave-v1.99.20-win32-arm64.zip"
           }
         }
       }
