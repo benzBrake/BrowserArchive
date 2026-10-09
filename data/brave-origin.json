@@ -108,24 +108,24 @@
       }
     },
     "nightly": {
-      "version": "1.99.24",
-      "published": "2026-10-08T01:23:50Z",
-      "chrome": "155.0.8059.40",
+      "version": "1.99.27",
+      "published": "2026-10-08T17:22:46Z",
+      "chrome": "156.0.8078.25",
       "files": {
         "x64": {
           "filename": "BraveOriginStandaloneNightlySetup.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.99.24/BraveOriginStandaloneNightlySetup.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.99.27/BraveOriginStandaloneNightlySetup.exe"
         }
       },
       "packages": {
         "x64": {
           "installer": {
             "filename": "BraveOriginStandaloneNightlySetup.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.99.24/BraveOriginStandaloneNightlySetup.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.99.27/BraveOriginStandaloneNightlySetup.exe"
           },
           "zip": {
-            "filename": "brave-origin-v1.99.24-win32-x64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.99.24/brave-origin-v1.99.24-win32-x64.zip"
+            "filename": "brave-origin-v1.99.27-win32-x64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.99.27/brave-origin-v1.99.27-win32-x64.zip"
           }
         }
       }
