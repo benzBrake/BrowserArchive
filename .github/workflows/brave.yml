@@ -19,10 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Scrape latest Windows versions and generate data/brave.json + data/brave-origin.json
+      - name: Generate and commit Brave data files
         run: |
-          bash scripts/brave.sh
-
-      - name: Commit Brave data files
-        run: |
-          bash scripts/commit_and_push.sh "chore: update brave.json and brave-origin.json" data/brave.json data/brave-origin.json
+          bash scripts/commit_and_push.sh --generate scripts/brave.sh "chore: update brave.json and brave-origin.json" data/brave.json data/brave-origin.json
