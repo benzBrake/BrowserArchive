@@ -1,57 +1,57 @@
 {
   "schema_version": 2,
   "name": "Brave Origin",
-  "version": "1.97.57",
-  "date": "2026-10-16",
+  "version": "1.97.59",
+  "date": "2026-10-17",
   "source": "https://versions.brave.com/latest/brave-versions.json",
   "channels": {
     "stable": {
-      "version": "1.97.57",
-      "published": "2026-10-14T05:35:25Z",
-      "chrome": "155.0.8059.80",
+      "version": "1.97.59",
+      "published": "2026-10-16T03:32:04Z",
+      "chrome": "155.0.8059.85",
       "files": {
         "x64": {
           "filename": "BraveOriginStandaloneSetup.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.57/BraveOriginStandaloneSetup.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.59/BraveOriginStandaloneSetup.exe"
         },
         "x86": {
           "filename": "BraveOriginStandaloneSetup32.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.57/BraveOriginStandaloneSetup32.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.59/BraveOriginStandaloneSetup32.exe"
         },
         "arm64": {
           "filename": "BraveOriginStandaloneSetupArm64.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.57/BraveOriginStandaloneSetupArm64.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.97.59/BraveOriginStandaloneSetupArm64.exe"
         }
       },
       "packages": {
         "x64": {
           "installer": {
             "filename": "BraveOriginStandaloneSetup.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.57/BraveOriginStandaloneSetup.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.59/BraveOriginStandaloneSetup.exe"
           },
           "zip": {
-            "filename": "brave-origin-v1.97.57-win32-x64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.57/brave-origin-v1.97.57-win32-x64.zip"
+            "filename": "brave-origin-v1.97.59-win32-x64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.59/brave-origin-v1.97.59-win32-x64.zip"
           }
         },
         "x86": {
           "installer": {
             "filename": "BraveOriginStandaloneSetup32.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.57/BraveOriginStandaloneSetup32.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.59/BraveOriginStandaloneSetup32.exe"
           },
           "zip": {
-            "filename": "brave-origin-v1.97.57-win32-ia32.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.57/brave-origin-v1.97.57-win32-ia32.zip"
+            "filename": "brave-origin-v1.97.59-win32-ia32.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.59/brave-origin-v1.97.59-win32-ia32.zip"
           }
         },
         "arm64": {
           "installer": {
             "filename": "BraveOriginStandaloneSetupArm64.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.57/BraveOriginStandaloneSetupArm64.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.59/BraveOriginStandaloneSetupArm64.exe"
           },
           "zip": {
-            "filename": "brave-origin-v1.97.57-win32-arm64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.57/brave-origin-v1.97.57-win32-arm64.zip"
+            "filename": "brave-origin-v1.97.59-win32-arm64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.97.59/brave-origin-v1.97.59-win32-arm64.zip"
           }
         }
       }
