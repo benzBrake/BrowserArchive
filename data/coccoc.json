@@ -1,14 +1,14 @@
 {
   "name": "Cốc Cốc",
-  "version": "152.0.7977.124",
-  "date": "2026-09-17",
+  "version": "154.0.8037.104",
+  "date": "2026-10-19",
   "source": "https://update.coccoc.com/service/update2/json",
-  "archive_item": "https://archive.org/details/coccoc-archive-152.0.7977.124",
+  "archive_item": "https://archive.org/details/coccoc-archive-154.0.8037.104",
   "files": {
     "x64": {
-      "filename": "coccoc-152.0.7977.124-win-x64.zip",
-      "sha256": "1bdfec56f4c30d2f05f882d3fd68d0eca14767a4838f2a7d1473617e9563eb35",
-      "url": "https://archive.org/download/coccoc-archive-152.0.7977.124/coccoc-152.0.7977.124-win-x64.zip"
+      "filename": "coccoc-154.0.8037.104-win-x64.zip",
+      "sha256": "13069ba1abe970b3ee4596151b43e19ac61a02a0d1f2c476759250b75abd854c",
+      "url": "https://archive.org/download/coccoc-archive-154.0.8037.104/coccoc-154.0.8037.104-win-x64.zip"
     }
   }
 }
