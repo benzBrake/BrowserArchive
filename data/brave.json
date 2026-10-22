@@ -2,7 +2,7 @@
   "schema_version": 2,
   "name": "Brave",
   "version": "1.97.59",
-  "date": "2026-10-21",
+  "date": "2026-10-22",
   "source": "https://versions.brave.com/latest/brave-versions.json",
   "channels": {
     "stable": {
@@ -108,24 +108,24 @@
       }
     },
     "nightly": {
-      "version": "1.100.6",
-      "published": "2026-10-16T01:21:06Z",
-      "chrome": "156.0.8078.39",
+      "version": "1.100.23",
+      "published": "2026-10-21T17:20:38Z",
+      "chrome": "156.0.8078.48",
       "files": {
         "x64": {
           "filename": "BraveBrowserStandaloneNightlySetup.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.100.6/BraveBrowserStandaloneNightlySetup.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.100.23/BraveBrowserStandaloneNightlySetup.exe"
         }
       },
       "packages": {
         "x64": {
           "installer": {
             "filename": "BraveBrowserStandaloneNightlySetup.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.100.6/BraveBrowserStandaloneNightlySetup.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.100.23/BraveBrowserStandaloneNightlySetup.exe"
           },
           "zip": {
-            "filename": "brave-v1.100.6-win32-x64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.100.6/brave-v1.100.6-win32-x64.zip"
+            "filename": "brave-v1.100.23-win32-x64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.100.23/brave-v1.100.23-win32-x64.zip"
           }
         }
       }
