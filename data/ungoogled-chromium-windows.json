@@ -2,7 +2,7 @@
   "name": "ungoogled-chromium Windows",
   "version": "156.0.8078.47",
   "release_version": "156.0.8078.47-1.1",
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "source": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/tag/156.0.8078.47-1.1",
   "release": {
     "tag_name": "156.0.8078.47-1.1",
@@ -20,7 +20,7 @@
       "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/156.0.8078.47-1.1/ungoogled-chromium_156.0.8078.47-1.1_installer_arm64.exe",
       "size": 134910976,
       "content_type": "application/x-msdos-program",
-      "download_count": 46,
+      "download_count": 262,
       "created_at": "2026-10-25T16:46:16Z",
       "updated_at": "2026-10-25T16:46:21Z",
       "digest": "sha256:2a3b7a92a19882e20c809820d3fc8803da3ba1059b5dc468671dad4b0bafe416"
@@ -30,7 +30,7 @@
       "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/156.0.8078.47-1.1/ungoogled-chromium_156.0.8078.47-1.1_installer_x64.exe",
       "size": 130510848,
       "content_type": "application/x-msdos-program",
-      "download_count": 107,
+      "download_count": 960,
       "created_at": "2026-10-25T16:46:16Z",
       "updated_at": "2026-10-25T16:46:22Z",
       "digest": "sha256:ad9451b36fe449dd49559181ba29be6f2c65b9a12d766b1848e89b3a0aabd222"
@@ -40,7 +40,7 @@
       "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/156.0.8078.47-1.1/ungoogled-chromium_156.0.8078.47-1.1_installer_x86.exe",
       "size": 119200768,
       "content_type": "application/x-msdos-program",
-      "download_count": 48,
+      "download_count": 292,
       "created_at": "2026-10-25T16:46:16Z",
       "updated_at": "2026-10-25T16:46:22Z",
       "digest": "sha256:c5b3565c7f13a90b1ad2f26bd97adff8acff10efaffd677a617bdd0b3ae78876"
@@ -50,7 +50,7 @@
       "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/156.0.8078.47-1.1/ungoogled-chromium_156.0.8078.47-1.1_windows_arm64.zip",
       "size": 193529599,
       "content_type": "application/zip",
-      "download_count": 15,
+      "download_count": 39,
       "created_at": "2026-10-25T16:46:16Z",
       "updated_at": "2026-10-25T16:46:24Z",
       "digest": "sha256:436416596ddef9df50b20f1f567816094c006a2fad61887b1ec7a62162cab400"
@@ -60,7 +60,7 @@
       "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/156.0.8078.47-1.1/ungoogled-chromium_156.0.8078.47-1.1_windows_x64.zip",
       "size": 201848261,
       "content_type": "application/zip",
-      "download_count": 77,
+      "download_count": 828,
       "created_at": "2026-10-25T16:46:16Z",
       "updated_at": "2026-10-25T16:46:24Z",
       "digest": "sha256:e8ed1486a88146bf72bfe3d22e198808560e16803a9a1ef62e6e3fc17c979800"
@@ -70,7 +70,7 @@
       "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/156.0.8078.47-1.1/ungoogled-chromium_156.0.8078.47-1.1_windows_x86.zip",
       "size": 190601112,
       "content_type": "application/zip",
-      "download_count": 8,
+      "download_count": 59,
       "created_at": "2026-10-25T16:46:16Z",
       "updated_at": "2026-10-25T16:46:23Z",
       "digest": "sha256:5355cc2a8ea304b258d8322ffa01474d4b39cbb6aecbf3dc033b45c5495f0a8c"
