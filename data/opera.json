@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "name": "Opera",
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "source": "https://autoupdate.geo.opera.com/api/verify",
   "products": {
     "opera": {
@@ -48,18 +48,18 @@
     },
     "opera_gx": {
       "name": "Opera GX",
-      "version": "137.0.6036.65",
+      "version": "138.0.6044.45",
       "channels": {
         "stable": {
-          "version": "137.0.6036.65",
+          "version": "138.0.6044.45",
           "files": {
             "x64": {
-              "filename": "Opera_GX_137.0.6036.65_Setup_x64.exe",
-              "url": "https://get.opera.com/ftp/pub/opera_gx/137.0.6036.65/win/Opera_GX_137.0.6036.65_Setup_x64.exe"
+              "filename": "Opera_GX_138.0.6044.45_Setup_x64.exe",
+              "url": "https://get.opera.com/ftp/pub/opera_gx/138.0.6044.45/win/Opera_GX_138.0.6044.45_Setup_x64.exe"
             },
             "x86": {
-              "filename": "Opera_GX_137.0.6036.65_Setup.exe",
-              "url": "https://get.opera.com/ftp/pub/opera_gx/137.0.6036.65/win/Opera_GX_137.0.6036.65_Setup.exe"
+              "filename": "Opera_GX_138.0.6044.45_Setup.exe",
+              "url": "https://get.opera.com/ftp/pub/opera_gx/138.0.6044.45/win/Opera_GX_138.0.6044.45_Setup.exe"
             }
           },
           "source": "https://autoupdate.geo.opera.com/api/verify?product=Opera%20GX&version=0.0.0.0"
