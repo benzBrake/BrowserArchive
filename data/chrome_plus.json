@@ -1,7 +1,7 @@
 {
   "name": "Chrome Plus",
   "version": "1.18.3",
-  "date": "2026-10-26",
+  "date": "2026-10-27",
   "source": "https://github.com/Bush2021/chrome_plus/releases/tag/1.18.3",
   "release": {
     "tag_name": "1.18.3",
@@ -9,7 +9,7 @@
     "published_at": "2026-10-26T19:37:29Z",
     "created_at": "2026-10-26T19:37:04Z",
     "html_url": "https://github.com/Bush2021/chrome_plus/releases/tag/1.18.3",
-    "body": "## Fix\n* 240777f fix: preserve held modifiers across repeated key mappings by @Bush2021\n\n    > **Resolves #284** - Mapped shortcuts now keep working across repeated presses while Alt or Ctrl remains held.\n\n* 68a08b1 fix: adapt for Chrome 158 tab container Fix #290. by @Bush2021\n\n    > **Resolves #290** - Fixes compatibility with Chrome 158's horizontal tab strip, including tab closing, mouse-wheel switching, hover activation, and keeping the last tab open.\n\n* 630eefe fix: stop swapped key mappings from looping by @Bush2021\n\n    > Fixes endless remapping with swapped shortcuts such as `F1=F2` and `F2=F1`, so the mapped key can reach Chrome.\n\n* 67461d2 fix: keep registration order for same-priority input handlers by @Bush2021\n\n    > Key mappings now consistently take priority when a mapping and the translate shortcut use the same key combination.\n\n\n## Maintenance\n* 61d76dc chore: update .gitignore by @Bush2021\n* 3d56b53 chore: improve issue templates by @Bush2021\n* 7665798 chore: remove dead code and unused includes by @Bush2021\n* b1810ef refactor: drop tab strip classes from Chrome 150 and earlier by @Bush2021\n* 3bf055b refactor: drop casts so Detours type-checks hooks by @Bush2021\n* c951132 refactor: share duplicated UIA, tab, INI and input helpers by @Bush2021\n\n**Full Changelog**: https://github.com/Bush2021/chrome_plus/compare/1.18.2...1.18.3\n",
+    "body": "## Fix\r\n* 240777f fix: preserve held modifiers across repeated key mappings by @Bush2021\r\n\r\n    > **Resolves #284** - Mapped shortcuts now keep working across repeated presses while Alt or Ctrl remains held.\r\n\r\n* 68a08b1 fix: adapt for Chrome 158 tab container by @Bush2021\r\n\r\n    > **Resolves #290** - Fixes compatibility with Chrome 158's horizontal tab strip, including tab closing, mouse-wheel switching, hover activation, and keeping the last tab open.\r\n\r\n* 630eefe fix: stop swapped key mappings from looping by @Bush2021\r\n\r\n    > Fixes endless remapping with swapped shortcuts such as `F1=F2` and `F2=F1`, so the mapped key can reach Chrome.\r\n\r\n* 67461d2 fix: keep registration order for same-priority input handlers by @Bush2021\r\n\r\n    > Key mappings now consistently take priority when a mapping and the translate shortcut use the same key combination.\r\n\r\n\r\n## Maintenance\r\n* 61d76dc chore: update .gitignore by @Bush2021\r\n* 3d56b53 chore: improve issue templates by @Bush2021\r\n* 7665798 chore: remove dead code and unused includes by @Bush2021\r\n* b1810ef refactor: drop tab strip classes from Chrome 150 and earlier by @Bush2021\r\n* 3bf055b refactor: drop casts so Detours type-checks hooks by @Bush2021\r\n* c951132 refactor: share duplicated UIA, tab, INI and input helpers by @Bush2021\r\n\r\n**Full Changelog**: https://github.com/Bush2021/chrome_plus/compare/1.18.2...1.18.3\r\n",
     "prerelease": false,
     "draft": false
   },
@@ -19,7 +19,7 @@
       "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.18.3/Chrome%2B%2B_v1.18.3_x86_x64_arm64.7z",
       "size": 181011,
       "content_type": "application/x-7z-compressed",
-      "download_count": 19,
+      "download_count": 318,
       "created_at": "2026-10-26T19:37:27Z",
       "updated_at": "2026-10-26T19:37:28Z"
     },
@@ -28,7 +28,7 @@
       "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.18.3/setdll.7z",
       "size": 271708,
       "content_type": "application/x-7z-compressed",
-      "download_count": 2,
+      "download_count": 88,
       "created_at": "2026-10-26T19:37:27Z",
       "updated_at": "2026-10-26T19:37:28Z"
     }
