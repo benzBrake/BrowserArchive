@@ -1,20 +1,20 @@
 {
   "name": "Vivaldi",
-  "version": "8.2.4133.94",
+  "version": "8.2.4133.96",
   "date": "2026-10-29",
   "source": "https://update.vivaldi.com/update/1.0/public/appcast.x64.xml",
   "channels": {
     "stable": {
-      "version": "8.2.4133.94",
-      "release_notes": "https://update.vivaldi.com/update/1.0/relnotes/8.2.4133.94.html",
+      "version": "8.2.4133.96",
+      "release_notes": "https://update.vivaldi.com/update/1.0/relnotes/8.2.4133.96.html",
       "files": {
         "x64": {
-          "filename": "Vivaldi.8.2.4133.94.x64.exe",
-          "url": "https://downloads.vivaldi.com/stable-auto/Vivaldi.8.2.4133.94.x64.exe"
+          "filename": "Vivaldi.8.2.4133.96.x64.exe",
+          "url": "https://downloads.vivaldi.com/stable-auto/Vivaldi.8.2.4133.96.x64.exe"
         },
         "arm64": {
-          "filename": "Vivaldi.8.2.4133.94.arm64.exe",
-          "url": "https://downloads.vivaldi.com/stable-auto/Vivaldi.8.2.4133.94.arm64.exe"
+          "filename": "Vivaldi.8.2.4133.96.arm64.exe",
+          "url": "https://downloads.vivaldi.com/stable-auto/Vivaldi.8.2.4133.96.arm64.exe"
         }
       }
     },
