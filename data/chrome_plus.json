@@ -1,36 +1,36 @@
 {
   "name": "Chrome Plus",
-  "version": "1.18.3",
-  "date": "2026-11-01",
-  "source": "https://github.com/Bush2021/chrome_plus/releases/tag/1.18.3",
+  "version": "1.19.0",
+  "date": "2026-11-02",
+  "source": "https://github.com/Bush2021/chrome_plus/releases/tag/1.19.0",
   "release": {
-    "tag_name": "1.18.3",
-    "name": "1.18.3",
-    "published_at": "2026-10-26T19:37:29Z",
-    "created_at": "2026-10-26T19:37:04Z",
-    "html_url": "https://github.com/Bush2021/chrome_plus/releases/tag/1.18.3",
-    "body": "## Fix\r\n* 240777f fix: preserve held modifiers across repeated key mappings by @Bush2021\r\n\r\n    > **Resolves #284** - Mapped shortcuts now keep working across repeated presses while Alt or Ctrl remains held.\r\n\r\n* 68a08b1 fix: adapt for Chrome 158 tab container by @Bush2021\r\n\r\n    > **Resolves #290** - Fixes compatibility with Chrome 158's horizontal tab strip, including tab closing, mouse-wheel switching, hover activation, and keeping the last tab open.\r\n\r\n* 630eefe fix: stop swapped key mappings from looping by @Bush2021\r\n\r\n    > Fixes endless remapping with swapped shortcuts such as `F1=F2` and `F2=F1`, so the mapped key can reach Chrome.\r\n\r\n* 67461d2 fix: keep registration order for same-priority input handlers by @Bush2021\r\n\r\n    > Key mappings now consistently take priority when a mapping and the translate shortcut use the same key combination.\r\n\r\n\r\n## Maintenance\r\n* 61d76dc chore: update .gitignore by @Bush2021\r\n* 3d56b53 chore: improve issue templates by @Bush2021\r\n* 7665798 chore: remove dead code and unused includes by @Bush2021\r\n* b1810ef refactor: drop tab strip classes from Chrome 150 and earlier by @Bush2021\r\n* 3bf055b refactor: drop casts so Detours type-checks hooks by @Bush2021\r\n* c951132 refactor: share duplicated UIA, tab, INI and input helpers by @Bush2021\r\n\r\n**Full Changelog**: https://github.com/Bush2021/chrome_plus/compare/1.18.2...1.18.3\r\n",
+    "tag_name": "1.19.0",
+    "name": "1.19.0",
+    "published_at": "2026-11-02T06:02:04Z",
+    "created_at": "2026-11-02T06:01:43Z",
+    "html_url": "https://github.com/Bush2021/chrome_plus/releases/tag/1.19.0",
+    "body": "## New\r\n\r\n* 82545bb feat: add `managed_updates` to apply builds staged by an updater by @Bush2021\r\n\r\n    > I'm also introducing [Pitstop](https://github.com/Bush2021/pitstop), my new Windows app for configuring Chrome++ Next and managing portable Chrome. It provides a graphical settings editor, updates for Chrome and Chrome++ Next, version rollback, and portable-profile backups before major Chrome updates.\r\n\r\n    > Chrome++ 1.19.0 adds the integration Pitstop needs for background and in-app updates. Pitstop prepares the new build, and Chrome's \"Relaunch to update\" applies it. Pitstop enables `managed_updates` automatically, so no manual INI edit is needed.\r\n\r\n## Fix\r\n\r\n* 0d80d13 fix: run launch commands once, without a console window by @Bush2021\r\n\r\n    > Opening a link from another app no longer reruns `launch_on_startup` or triggers `launch_on_exit` in the process that forwards the link to the running browser.\r\n\r\n    > Commands in `launch_on_startup` and `launch_on_exit` now run without a console window by default. If a command needs a console or interactive input, change it to `start \"\" <command>`. Programs with their own windows still display them normally.\r\n\r\n* 84d01b5 fix: run exit commands before a relaunched browser's startup commands by @Bush2021\r\n\r\n    > On relaunch, Chrome now waits up to 3 seconds for `launch_on_exit` commands before the new browser runs `launch_on_startup`. This gives cleanup commands time to finish before helper programs restart. Startup commands proceed after the wait even if an exit command is still running.\r\n\r\n* 7b80a11 fix: match launch switches by argument, not by substring by @Bush2021\r\n\r\n    > Links containing text such as `content-type=` or `--portable` no longer get mistaken for launch switches. Opening these links from another app now preserves the configured portable profile instead of potentially opening Chrome with the default profile.\r\n\r\n**Full Changelog**: https://github.com/Bush2021/chrome_plus/compare/1.18.3...1.19.0",
     "prerelease": false,
     "draft": false
   },
   "files": [
     {
-      "filename": "Chrome++_v1.18.3_x86_x64_arm64.7z",
-      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.18.3/Chrome%2B%2B_v1.18.3_x86_x64_arm64.7z",
-      "size": 181011,
+      "filename": "Chrome++_v1.19.0_x86_x64_arm64.7z",
+      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.19.0/Chrome%2B%2B_v1.19.0_x86_x64_arm64.7z",
+      "size": 195408,
       "content_type": "application/x-7z-compressed",
-      "download_count": 1151,
-      "created_at": "2026-10-26T19:37:27Z",
-      "updated_at": "2026-10-26T19:37:28Z"
+      "download_count": 236,
+      "created_at": "2026-11-02T06:02:03Z",
+      "updated_at": "2026-11-02T06:02:03Z"
     },
     {
       "filename": "setdll.7z",
-      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.18.3/setdll.7z",
-      "size": 271708,
+      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.19.0/setdll.7z",
+      "size": 286313,
       "content_type": "application/x-7z-compressed",
-      "download_count": 284,
-      "created_at": "2026-10-26T19:37:27Z",
-      "updated_at": "2026-10-26T19:37:28Z"
+      "download_count": 58,
+      "created_at": "2026-11-02T06:02:03Z",
+      "updated_at": "2026-11-02T06:02:04Z"
     }
   ]
 }
