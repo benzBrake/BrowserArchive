@@ -19,7 +19,7 @@
       "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.19.0/Chrome%2B%2B_v1.19.0_x86_x64_arm64.7z",
       "size": 195408,
       "content_type": "application/x-7z-compressed",
-      "download_count": 1082,
+      "download_count": 1115,
       "created_at": "2026-11-02T06:02:03Z",
       "updated_at": "2026-11-02T06:02:03Z"
     },
@@ -28,9 +28,18 @@
       "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.19.0/setdll.7z",
       "size": 286313,
       "content_type": "application/x-7z-compressed",
-      "download_count": 238,
+      "download_count": 249,
       "created_at": "2026-11-02T06:02:03Z",
       "updated_at": "2026-11-02T06:02:04Z"
+    },
+    {
+      "filename": "update.json",
+      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.19.0/update.json",
+      "size": 111,
+      "content_type": "application/json",
+      "download_count": 9,
+      "created_at": "2026-11-06T15:40:48Z",
+      "updated_at": "2026-11-06T15:40:48Z"
     }
   ]
 }
