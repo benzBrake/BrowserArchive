@@ -3,9 +3,9 @@
     "uBlock0@raymondhill.net": {
       "updates": [
         {
-          "update_hash": "sha512:A3EAE5FA2E63C3F062ECF3EE4C7AF1FFA2354F6B3E04B2DA93D35A3433F58D593C1D24889466A8761443001BC57B78000BFA60593DBC5945F79B218622721AEF",
-          "version": "1.75.4",
-          "update_link": "https://v6.gh-proxy.org/https://github.com/gorhill/uBlock/releases/download/1.75.4/uBlock0_1.75.4.firefox.signed.xpi",
+          "update_hash": "sha512:749B903ADD4F5D21D5C5327990D9926DC00B3DD98C30BA52FE12427AB514A81AF35FDF2802949C4170DD8082C3320DB48AE86578C5C489DABF9AD517BC1F942B",
+          "version": "1.76.0",
+          "update_link": "https://v6.gh-proxy.org/https://github.com/gorhill/uBlock/releases/download/1.76.0/uBlock0_1.76.0.firefox.signed.xpi",
           "applications": {
             "gecko": {
               "strict_min_version": "115.0"
