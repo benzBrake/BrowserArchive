@@ -2,7 +2,7 @@
   "schema_version": 2,
   "name": "Brave Origin",
   "version": "1.99.55",
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "source": "https://versions.brave.com/latest/brave-versions.json",
   "channels": {
     "stable": {
@@ -108,24 +108,24 @@
       }
     },
     "nightly": {
-      "version": "1.101.31",
-      "published": "2026-11-06T01:19:27Z",
-      "chrome": "157.0.8103.39",
+      "version": "1.101.38",
+      "published": "2026-11-09T17:09:10Z",
+      "chrome": "158.0.8127.22",
       "files": {
         "x64": {
           "filename": "BraveOriginStandaloneNightlySetup.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.101.31/BraveOriginStandaloneNightlySetup.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.101.38/BraveOriginStandaloneNightlySetup.exe"
         }
       },
       "packages": {
         "x64": {
           "installer": {
             "filename": "BraveOriginStandaloneNightlySetup.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.101.31/BraveOriginStandaloneNightlySetup.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.101.38/BraveOriginStandaloneNightlySetup.exe"
           },
           "zip": {
-            "filename": "brave-origin-v1.101.31-win32-x64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.101.31/brave-origin-v1.101.31-win32-x64.zip"
+            "filename": "brave-origin-v1.101.38-win32-x64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.101.38/brave-origin-v1.101.38-win32-x64.zip"
           }
         }
       }
