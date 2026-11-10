@@ -6,22 +6,22 @@
   "products": {
     "opera": {
       "name": "Opera",
-      "version": "139.0.6053.38",
+      "version": "140.0.6074.17",
       "channels": {
         "stable": {
-          "version": "139.0.6053.38",
+          "version": "140.0.6074.17",
           "files": {
             "x64": {
-              "filename": "Opera_139.0.6053.38_Setup_x64.exe",
-              "url": "https://get.opera.com/ftp/pub/opera/desktop/139.0.6053.38/win/Opera_139.0.6053.38_Setup_x64.exe"
+              "filename": "Opera_140.0.6074.17_Setup_x64.exe",
+              "url": "https://get.opera.com/ftp/pub/opera/desktop/140.0.6074.17/win/Opera_140.0.6074.17_Setup_x64.exe"
             },
             "arm64": {
-              "filename": "Opera_139.0.6053.38_Setup_arm64.exe",
-              "url": "https://get.opera.com/ftp/pub/opera/desktop/139.0.6053.38/win/Opera_139.0.6053.38_Setup_arm64.exe"
+              "filename": "Opera_140.0.6074.17_Setup_arm64.exe",
+              "url": "https://get.opera.com/ftp/pub/opera/desktop/140.0.6074.17/win/Opera_140.0.6074.17_Setup_arm64.exe"
             },
             "x86": {
-              "filename": "Opera_139.0.6053.38_Setup.exe",
-              "url": "https://get.opera.com/ftp/pub/opera/desktop/139.0.6053.38/win/Opera_139.0.6053.38_Setup.exe"
+              "filename": "Opera_140.0.6074.17_Setup.exe",
+              "url": "https://get.opera.com/ftp/pub/opera/desktop/140.0.6074.17/win/Opera_140.0.6074.17_Setup.exe"
             }
           },
           "source": "https://autoupdate.geo.opera.com/api/verify?product=Opera&version=0.0.0.0"
@@ -67,5 +67,5 @@
       }
     }
   },
-  "version": "139.0.6053.38"
+  "version": "140.0.6074.17"
 }
