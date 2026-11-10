@@ -1,45 +1,45 @@
 {
   "name": "Chrome Plus",
-  "version": "1.19.0",
-  "date": "2026-11-09",
-  "source": "https://github.com/Bush2021/chrome_plus/releases/tag/1.19.0",
+  "version": "1.20.0",
+  "date": "2026-11-10",
+  "source": "https://github.com/Bush2021/chrome_plus/releases/tag/1.20.0",
   "release": {
-    "tag_name": "1.19.0",
-    "name": "1.19.0",
-    "published_at": "2026-11-02T06:02:04Z",
-    "created_at": "2026-11-02T06:01:43Z",
-    "html_url": "https://github.com/Bush2021/chrome_plus/releases/tag/1.19.0",
-    "body": "## New\r\n\r\n* 82545bb feat: add `managed_updates` to apply builds staged by an updater by @Bush2021\r\n\r\n    > I'm also introducing [Pitstop](https://github.com/Bush2021/pitstop), my new Windows app for configuring Chrome++ Next and managing portable Chrome. It provides a graphical settings editor, updates for Chrome and Chrome++ Next, version rollback, and portable-profile backups before major Chrome updates.\r\n\r\n    > Chrome++ 1.19.0 adds the integration Pitstop needs for background and in-app updates. Pitstop prepares the new build, and Chrome's \"Relaunch to update\" applies it. Pitstop enables `managed_updates` automatically, so no manual INI edit is needed.\r\n\r\n## Fix\r\n\r\n* 0d80d13 fix: run launch commands once, without a console window by @Bush2021\r\n\r\n    > Opening a link from another app no longer reruns `launch_on_startup` or triggers `launch_on_exit` in the process that forwards the link to the running browser.\r\n\r\n    > Commands in `launch_on_startup` and `launch_on_exit` now run without a console window by default. If a command needs a console or interactive input, change it to `start \"\" <command>`. Programs with their own windows still display them normally.\r\n\r\n* 84d01b5 fix: run exit commands before a relaunched browser's startup commands by @Bush2021\r\n\r\n    > On relaunch, Chrome now waits up to 3 seconds for `launch_on_exit` commands before the new browser runs `launch_on_startup`. This gives cleanup commands time to finish before helper programs restart. Startup commands proceed after the wait even if an exit command is still running.\r\n\r\n* 7b80a11 fix: match launch switches by argument, not by substring by @Bush2021\r\n\r\n    > Links containing text such as `content-type=` or `--portable` no longer get mistaken for launch switches. Opening these links from another app now preserves the configured portable profile instead of potentially opening Chrome with the default profile.\r\n\r\n**Full Changelog**: https://github.com/Bush2021/chrome_plus/compare/1.18.3...1.19.0",
+    "tag_name": "1.20.0",
+    "name": "1.20.0",
+    "published_at": "2026-11-09T20:32:14Z",
+    "created_at": "2026-11-09T20:31:45Z",
+    "html_url": "https://github.com/Bush2021/chrome_plus/releases/tag/1.20.0",
+    "body": "> ⚠️ **Action Required**\n>\n> `show_password` has been removed. It was on by default, so viewing saved passwords in `chrome://password-manager` now asks for Windows authentication (Windows Hello or your sign-in password), the same as in stock Chrome. If your `chrome++.ini` still has a `show_password` line, delete it. It no longer does anything.\n\n## New\n\n* 2ff6ea0 feat!: remove `show_password` by @Bush2021\n\n    > **Resolves #295** - On domain-joined machines, Chrome now trusts domain policies again. The `show_password` hook made Chrome treat these machines as unmanaged, so `ExtensionInstallForcelist` entries from outside the Chrome Web Store were marked `[BLOCKED]`: they never installed, and extensions they had installed earlier were removed.\n\n## Fix\n\n* e6668a0 fix(appid): map every AppUserModelID Chrome hands to Windows by @Bush2021\n\n    > Chrome 157 and later no longer split a pinned Chrome from its open windows on the taskbar. Every 30 days, Chrome rewrites taskbar pins to its own app ID, which moved the windows into a second taskbar group. Pins that were already split rejoin the next time Chrome runs this check, at most 30 days later. Chrome also adds `--source-shortcut-location=taskbar` to the pin's arguments. This switch is harmless.\n\n    > Right-clicking Chrome on the taskbar now shows Chrome's own jump list: New window, New Incognito window, most visited sites and recently closed tabs. Shortcuts that Chrome creates itself also group with its windows.\n\n    > Installed web apps (PWAs) now get their own taskbar groups, as in stock Chrome, instead of joining the Chrome group. They also match the Start menu shortcuts and pins Chrome creates for them. DevTools windows still group with Chrome.\n\n**Full Changelog**: https://github.com/Bush2021/chrome_plus/compare/1.19.0...1.20.0\n",
     "prerelease": false,
     "draft": false
   },
   "files": [
     {
-      "filename": "Chrome++_v1.19.0_x86_x64_arm64.7z",
-      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.19.0/Chrome%2B%2B_v1.19.0_x86_x64_arm64.7z",
-      "size": 195408,
+      "filename": "Chrome++_v1.20.0_x86_x64_arm64.7z",
+      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.20.0/Chrome%2B%2B_v1.20.0_x86_x64_arm64.7z",
+      "size": 198331,
       "content_type": "application/x-7z-compressed",
-      "download_count": 1387,
-      "created_at": "2026-11-02T06:02:03Z",
-      "updated_at": "2026-11-02T06:02:03Z"
+      "download_count": 62,
+      "created_at": "2026-11-09T20:32:13Z",
+      "updated_at": "2026-11-09T20:32:13Z"
     },
     {
       "filename": "setdll.7z",
-      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.19.0/setdll.7z",
-      "size": 286313,
+      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.20.0/setdll.7z",
+      "size": 289060,
       "content_type": "application/x-7z-compressed",
-      "download_count": 336,
-      "created_at": "2026-11-02T06:02:03Z",
-      "updated_at": "2026-11-02T06:02:04Z"
+      "download_count": 14,
+      "created_at": "2026-11-09T20:32:13Z",
+      "updated_at": "2026-11-09T20:32:13Z"
     },
     {
       "filename": "update.json",
-      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.19.0/update.json",
-      "size": 111,
+      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.20.0/update.json",
+      "size": 124,
       "content_type": "application/json",
-      "download_count": 201,
-      "created_at": "2026-11-06T15:40:48Z",
-      "updated_at": "2026-11-06T15:40:48Z"
+      "download_count": 28,
+      "created_at": "2026-11-09T20:32:13Z",
+      "updated_at": "2026-11-09T20:32:13Z"
     }
   ]
 }
