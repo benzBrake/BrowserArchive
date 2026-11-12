@@ -1,7 +1,7 @@
 {
   "name": "Vivaldi",
   "version": "8.3.4191.35",
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "source": "https://update.vivaldi.com/update/1.0/public/appcast.x64.xml",
   "channels": {
     "stable": {
