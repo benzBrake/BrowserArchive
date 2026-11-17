@@ -57,103 +57,75 @@
       }
     },
     "beta": {
-      "version": "1.101.47",
-      "published": "2026-11-12T05:08:45Z",
-      "chrome": "158.0.8127.22",
+      "version": "1.101.50",
+      "published": "2026-11-17T05:09:21Z",
+      "chrome": "158.0.8127.37",
       "files": {
         "x64": {
           "filename": "BraveBrowserStandaloneBetaSetup.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.101.47/BraveBrowserStandaloneBetaSetup.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.101.50/BraveBrowserStandaloneBetaSetup.exe"
         },
         "x86": {
           "filename": "BraveBrowserStandaloneBetaSetup32.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.101.47/BraveBrowserStandaloneBetaSetup32.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.101.50/BraveBrowserStandaloneBetaSetup32.exe"
         },
         "arm64": {
           "filename": "BraveBrowserStandaloneBetaSetupArm64.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.101.47/BraveBrowserStandaloneBetaSetupArm64.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.101.50/BraveBrowserStandaloneBetaSetupArm64.exe"
         }
       },
       "packages": {
         "x64": {
           "installer": {
             "filename": "BraveBrowserStandaloneBetaSetup.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.101.47/BraveBrowserStandaloneBetaSetup.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.101.50/BraveBrowserStandaloneBetaSetup.exe"
           },
           "zip": {
-            "filename": "brave-v1.101.47-win32-x64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.101.47/brave-v1.101.47-win32-x64.zip"
+            "filename": "brave-v1.101.50-win32-x64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.101.50/brave-v1.101.50-win32-x64.zip"
           }
         },
         "x86": {
           "installer": {
             "filename": "BraveBrowserStandaloneBetaSetup32.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.101.47/BraveBrowserStandaloneBetaSetup32.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.101.50/BraveBrowserStandaloneBetaSetup32.exe"
           },
           "zip": {
-            "filename": "brave-v1.101.47-win32-ia32.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.101.47/brave-v1.101.47-win32-ia32.zip"
+            "filename": "brave-v1.101.50-win32-ia32.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.101.50/brave-v1.101.50-win32-ia32.zip"
           }
         },
         "arm64": {
           "installer": {
             "filename": "BraveBrowserStandaloneBetaSetupArm64.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.101.47/BraveBrowserStandaloneBetaSetupArm64.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.101.50/BraveBrowserStandaloneBetaSetupArm64.exe"
           },
           "zip": {
-            "filename": "brave-v1.101.47-win32-arm64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.101.47/brave-v1.101.47-win32-arm64.zip"
+            "filename": "brave-v1.101.50-win32-arm64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.101.50/brave-v1.101.50-win32-arm64.zip"
           }
         }
       }
     },
     "nightly": {
-      "version": "1.102.10",
-      "published": "2026-11-16T13:24:23Z",
+      "version": "1.102.12",
+      "published": "2026-11-16T17:12:15Z",
       "chrome": "158.0.8127.37",
       "files": {
         "x64": {
           "filename": "BraveBrowserStandaloneNightlySetup.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.102.10/BraveBrowserStandaloneNightlySetup.exe"
-        },
-        "x86": {
-          "filename": "BraveBrowserStandaloneNightlySetup32.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.102.10/BraveBrowserStandaloneNightlySetup32.exe"
-        },
-        "arm64": {
-          "filename": "BraveBrowserStandaloneNightlySetupArm64.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.102.10/BraveBrowserStandaloneNightlySetupArm64.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.102.12/BraveBrowserStandaloneNightlySetup.exe"
         }
       },
       "packages": {
         "x64": {
           "installer": {
             "filename": "BraveBrowserStandaloneNightlySetup.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.10/BraveBrowserStandaloneNightlySetup.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.12/BraveBrowserStandaloneNightlySetup.exe"
           },
           "zip": {
-            "filename": "brave-v1.102.10-win32-x64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.10/brave-v1.102.10-win32-x64.zip"
-          }
-        },
-        "x86": {
-          "installer": {
-            "filename": "BraveBrowserStandaloneNightlySetup32.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.10/BraveBrowserStandaloneNightlySetup32.exe"
-          },
-          "zip": {
-            "filename": "brave-v1.102.10-win32-ia32.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.10/brave-v1.102.10-win32-ia32.zip"
-          }
-        },
-        "arm64": {
-          "installer": {
-            "filename": "BraveBrowserStandaloneNightlySetupArm64.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.10/BraveBrowserStandaloneNightlySetupArm64.exe"
-          },
-          "zip": {
-            "filename": "brave-v1.102.10-win32-arm64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.10/brave-v1.102.10-win32-arm64.zip"
+            "filename": "brave-v1.102.12-win32-x64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.12/brave-v1.102.12-win32-x64.zip"
           }
         }
       }
