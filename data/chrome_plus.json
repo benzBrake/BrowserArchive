@@ -1,45 +1,45 @@
 {
   "name": "Chrome Plus",
-  "version": "1.20.0",
-  "date": "2026-11-16",
-  "source": "https://github.com/Bush2021/chrome_plus/releases/tag/1.20.0",
+  "version": "1.20.1",
+  "date": "2026-11-17",
+  "source": "https://github.com/Bush2021/chrome_plus/releases/tag/1.20.1",
   "release": {
-    "tag_name": "1.20.0",
-    "name": "1.20.0",
-    "published_at": "2026-11-09T20:32:14Z",
-    "created_at": "2026-11-09T20:31:45Z",
-    "html_url": "https://github.com/Bush2021/chrome_plus/releases/tag/1.20.0",
-    "body": "> ⚠️ **Action Required**\n>\n> `show_password` has been removed. It was on by default, so viewing saved passwords in `chrome://password-manager` now asks for Windows authentication (Windows Hello or your sign-in password), the same as in stock Chrome. If your `chrome++.ini` still has a `show_password` line, delete it. It no longer does anything.\n\n## New\n\n* 2ff6ea0 feat!: remove `show_password` by @Bush2021\n\n    > **Resolves #295** - On domain-joined machines, Chrome now trusts domain policies again. The `show_password` hook made Chrome treat these machines as unmanaged, so `ExtensionInstallForcelist` entries from outside the Chrome Web Store were marked `[BLOCKED]`: they never installed, and extensions they had installed earlier were removed.\n\n## Fix\n\n* e6668a0 fix(appid): map every AppUserModelID Chrome hands to Windows by @Bush2021\n\n    > Chrome 157 and later no longer split a pinned Chrome from its open windows on the taskbar. Every 30 days, Chrome rewrites taskbar pins to its own app ID, which moved the windows into a second taskbar group. Pins that were already split rejoin the next time Chrome runs this check, at most 30 days later. Chrome also adds `--source-shortcut-location=taskbar` to the pin's arguments. This switch is harmless.\n\n    > Right-clicking Chrome on the taskbar now shows Chrome's own jump list: New window, New Incognito window, most visited sites and recently closed tabs. Shortcuts that Chrome creates itself also group with its windows.\n\n    > Installed web apps (PWAs) now get their own taskbar groups, as in stock Chrome, instead of joining the Chrome group. They also match the Start menu shortcuts and pins Chrome creates for them. DevTools windows still group with Chrome.\n\n**Full Changelog**: https://github.com/Bush2021/chrome_plus/compare/1.19.0...1.20.0\n",
+    "tag_name": "1.20.1",
+    "name": "1.20.1",
+    "published_at": "2026-11-16T18:00:31Z",
+    "created_at": "2026-11-16T18:00:02Z",
+    "html_url": "https://github.com/Bush2021/chrome_plus/releases/tag/1.20.1",
+    "body": "## Fix\n* edc7a42 fix: detect the New Tab page in fullscreen for `new_tab_disable` by @Bush2021\n\n    > **Resolves #299** - With `open_bookmark_new_tab` and `new_tab_disable` both on, clicking a bookmark from a New Tab page in fullscreen (F11) now opens it in that tab, the same as in a normal window. Before this fix, bookmarks clicked in fullscreen always opened in a new tab.\n\n**Full Changelog**: https://github.com/Bush2021/chrome_plus/compare/1.20.0...1.20.1\n",
     "prerelease": false,
     "draft": false
   },
   "files": [
     {
-      "filename": "Chrome++_v1.20.0_x86_x64_arm64.7z",
-      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.20.0/Chrome%2B%2B_v1.20.0_x86_x64_arm64.7z",
-      "size": 198331,
+      "filename": "Chrome++_v1.20.1_x86_x64_arm64.7z",
+      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.20.1/Chrome%2B%2B_v1.20.1_x86_x64_arm64.7z",
+      "size": 199059,
       "content_type": "application/x-7z-compressed",
-      "download_count": 1235,
-      "created_at": "2026-11-09T20:32:13Z",
-      "updated_at": "2026-11-09T20:32:13Z"
+      "download_count": 71,
+      "created_at": "2026-11-16T18:00:30Z",
+      "updated_at": "2026-11-16T18:00:30Z"
     },
     {
       "filename": "setdll.7z",
-      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.20.0/setdll.7z",
-      "size": 289060,
+      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.20.1/setdll.7z",
+      "size": 289737,
       "content_type": "application/x-7z-compressed",
-      "download_count": 311,
-      "created_at": "2026-11-09T20:32:13Z",
-      "updated_at": "2026-11-09T20:32:13Z"
+      "download_count": 17,
+      "created_at": "2026-11-16T18:00:30Z",
+      "updated_at": "2026-11-16T18:00:30Z"
     },
     {
       "filename": "update.json",
-      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.20.0/update.json",
+      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.20.1/update.json",
       "size": 124,
       "content_type": "application/json",
-      "download_count": 902,
-      "created_at": "2026-11-09T20:32:13Z",
-      "updated_at": "2026-11-09T20:32:13Z"
+      "download_count": 25,
+      "created_at": "2026-11-16T18:00:30Z",
+      "updated_at": "2026-11-16T18:00:30Z"
     }
   ]
 }
