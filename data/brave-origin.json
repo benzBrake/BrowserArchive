@@ -2,7 +2,7 @@
   "schema_version": 2,
   "name": "Brave Origin",
   "version": "1.100.58",
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "source": "https://versions.brave.com/latest/brave-versions.json",
   "channels": {
     "stable": {
@@ -108,52 +108,24 @@
       }
     },
     "nightly": {
-      "version": "1.102.18",
-      "published": "2026-11-18T13:25:26Z",
-      "chrome": "158.0.8127.42",
+      "version": "1.102.24",
+      "published": "2026-11-19T17:09:49Z",
+      "chrome": "159.0.8154.18",
       "files": {
         "x64": {
           "filename": "BraveOriginStandaloneNightlySetup.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.102.18/BraveOriginStandaloneNightlySetup.exe"
-        },
-        "x86": {
-          "filename": "BraveOriginStandaloneNightlySetup32.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.102.18/BraveOriginStandaloneNightlySetup32.exe"
-        },
-        "arm64": {
-          "filename": "BraveOriginStandaloneNightlySetupArm64.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.102.18/BraveOriginStandaloneNightlySetupArm64.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.102.24/BraveOriginStandaloneNightlySetup.exe"
         }
       },
       "packages": {
         "x64": {
           "installer": {
             "filename": "BraveOriginStandaloneNightlySetup.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.18/BraveOriginStandaloneNightlySetup.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.24/BraveOriginStandaloneNightlySetup.exe"
           },
           "zip": {
-            "filename": "brave-origin-v1.102.18-win32-x64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.18/brave-origin-v1.102.18-win32-x64.zip"
-          }
-        },
-        "x86": {
-          "installer": {
-            "filename": "BraveOriginStandaloneNightlySetup32.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.18/BraveOriginStandaloneNightlySetup32.exe"
-          },
-          "zip": {
-            "filename": "brave-origin-v1.102.18-win32-ia32.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.18/brave-origin-v1.102.18-win32-ia32.zip"
-          }
-        },
-        "arm64": {
-          "installer": {
-            "filename": "BraveOriginStandaloneNightlySetupArm64.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.18/BraveOriginStandaloneNightlySetupArm64.exe"
-          },
-          "zip": {
-            "filename": "brave-origin-v1.102.18-win32-arm64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.18/brave-origin-v1.102.18-win32-arm64.zip"
+            "filename": "brave-origin-v1.102.24-win32-x64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.24/brave-origin-v1.102.24-win32-x64.zip"
           }
         }
       }
