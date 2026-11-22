@@ -20,6 +20,8 @@ jobs:
       - uses: actions/checkout@v5
 
       - name: Scrape latest Helium Windows release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: bash scripts/helium.sh
 
       - name: Commit Helium data file

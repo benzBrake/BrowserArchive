@@ -16,7 +16,11 @@ $PY - <<'EOF'
 import datetime, json, os, urllib.request
 
 API = "https://api.github.com/repos/imputnet/helium-windows/releases/latest"
-request = urllib.request.Request(API, headers={"Accept": "application/vnd.github+json", "User-Agent": "BrowserArchive"})
+headers = {"Accept": "application/vnd.github+json", "User-Agent": "BrowserArchive"}
+token = os.environ.get("GITHUB_TOKEN")
+if token:
+    headers["Authorization"] = f"Bearer {token}"
+request = urllib.request.Request(API, headers=headers)
 with urllib.request.urlopen(request, timeout=60) as response:
     release = json.load(response)
 

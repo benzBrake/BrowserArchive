@@ -8,7 +8,10 @@ PY="$(command -v uv >/dev/null 2>&1 && echo 'uv run --no-project python' || echo
 $PY - <<'EOF'
 import datetime, json, os, tempfile, urllib.request
 API = "https://api.github.com/repos/Bush2021/chrome_plus/releases/latest"
-request = urllib.request.Request(API, headers={"Accept": "application/vnd.github+json", "User-Agent": "BrowserArchive"})
+headers = {"Accept": "application/vnd.github+json", "User-Agent": "BrowserArchive"}
+token = os.environ.get("GITHUB_TOKEN")
+if token: headers["Authorization"] = f"Bearer {token}"
+request = urllib.request.Request(API, headers=headers)
 with urllib.request.urlopen(request, timeout=60) as response: release = json.load(response)
 if release.get("draft") or release.get("prerelease"): raise SystemExit("latest Chrome Plus release is not a stable release")
 tag = (release.get("tag_name") or "").strip()

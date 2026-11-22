@@ -20,6 +20,8 @@ jobs:
       - uses: actions/checkout@v5
 
       - name: Scrape latest Floorp Windows release and matching portable build
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: bash scripts/floorp.sh
 
       - name: Commit Floorp data file

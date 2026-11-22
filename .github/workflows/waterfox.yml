@@ -19,6 +19,8 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Scrape latest Waterfox release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: bash scripts/waterfox.sh
       - name: Commit Waterfox data file
         run: |
