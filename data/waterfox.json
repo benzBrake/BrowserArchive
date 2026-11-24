@@ -1,7 +1,28 @@
 {
   "name": "Waterfox",
   "version": "6.7.9",
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "source": "https://github.com/BrowserWorks/waterfox/releases/tag/6.7.9",
-  "files": []
+  "files": [
+    {
+      "filename": "Waterfox 6.7.9.dmg",
+      "url": "https://cdn.waterfox.com/waterfox/releases/6.7.9/Darwin_x86_64-aarch64/Waterfox%206.7.9.dmg"
+    },
+    {
+      "filename": "Waterfox Setup 6.7.9.exe",
+      "url": "https://cdn.waterfox.com/waterfox/releases/6.7.9/WINNT_x86_64/Waterfox%20Setup%206.7.9.exe"
+    },
+    {
+      "filename": "Waterfox Setup 6.7.9.exe",
+      "url": "https://cdn.waterfox.com/waterfox/releases/6.7.9/WINNT_aarch64/Waterfox%20Setup%206.7.9.exe"
+    },
+    {
+      "filename": "waterfox-6.7.9.tar.bz2",
+      "url": "https://cdn.waterfox.com/waterfox/releases/6.7.9/Linux_x86_64/waterfox-6.7.9.tar.bz2"
+    },
+    {
+      "filename": "waterfox-6.7.9.tar.bz2",
+      "url": "https://cdn.waterfox.com/waterfox/releases/6.7.9/Linux_aarch64/waterfox-6.7.9.tar.bz2"
+    }
+  ]
 }
