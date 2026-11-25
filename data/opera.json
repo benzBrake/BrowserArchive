@@ -27,19 +27,19 @@
           "source": "https://autoupdate.geo.opera.com/api/verify?product=Opera&version=0.0.0.0"
         },
         "developer": {
-          "version": "141.0.6087.0",
+          "version": "142.0.6095.0",
           "files": {
             "x64": {
-              "filename": "Opera_Developer_141.0.6087.0_Setup_x64.exe",
-              "url": "https://get.opera.com/ftp/pub/opera-developer/141.0.6087.0/win/Opera_Developer_141.0.6087.0_Setup_x64.exe"
+              "filename": "Opera_Developer_142.0.6095.0_Setup_x64.exe",
+              "url": "https://get.opera.com/ftp/pub/opera-developer/142.0.6095.0/win/Opera_Developer_142.0.6095.0_Setup_x64.exe"
             },
             "arm64": {
-              "filename": "Opera_Developer_141.0.6087.0_Setup_arm64.exe",
-              "url": "https://get.opera.com/ftp/pub/opera-developer/141.0.6087.0/win/Opera_Developer_141.0.6087.0_Setup_arm64.exe"
+              "filename": "Opera_Developer_142.0.6095.0_Setup_arm64.exe",
+              "url": "https://get.opera.com/ftp/pub/opera-developer/142.0.6095.0/win/Opera_Developer_142.0.6095.0_Setup_arm64.exe"
             },
             "x86": {
-              "filename": "Opera_Developer_141.0.6087.0_Setup.exe",
-              "url": "https://get.opera.com/ftp/pub/opera-developer/141.0.6087.0/win/Opera_Developer_141.0.6087.0_Setup.exe"
+              "filename": "Opera_Developer_142.0.6095.0_Setup.exe",
+              "url": "https://get.opera.com/ftp/pub/opera-developer/142.0.6095.0/win/Opera_Developer_142.0.6095.0_Setup.exe"
             }
           },
           "source": "https://autoupdate.geo.opera.com/api/verify?product=Opera%20Developer&version=0.0.0.0"
