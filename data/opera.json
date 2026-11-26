@@ -6,22 +6,22 @@
   "products": {
     "opera": {
       "name": "Opera",
-      "version": "140.0.6074.36",
+      "version": "141.0.6089.28",
       "channels": {
         "stable": {
-          "version": "140.0.6074.36",
+          "version": "141.0.6089.28",
           "files": {
             "x64": {
-              "filename": "Opera_140.0.6074.36_Setup_x64.exe",
-              "url": "https://get.opera.com/ftp/pub/opera/desktop/140.0.6074.36/win/Opera_140.0.6074.36_Setup_x64.exe"
+              "filename": "Opera_141.0.6089.28_Setup_x64.exe",
+              "url": "https://get.opera.com/ftp/pub/opera/desktop/141.0.6089.28/win/Opera_141.0.6089.28_Setup_x64.exe"
             },
             "arm64": {
-              "filename": "Opera_140.0.6074.36_Setup_arm64.exe",
-              "url": "https://get.opera.com/ftp/pub/opera/desktop/140.0.6074.36/win/Opera_140.0.6074.36_Setup_arm64.exe"
+              "filename": "Opera_141.0.6089.28_Setup_arm64.exe",
+              "url": "https://get.opera.com/ftp/pub/opera/desktop/141.0.6089.28/win/Opera_141.0.6089.28_Setup_arm64.exe"
             },
             "x86": {
-              "filename": "Opera_140.0.6074.36_Setup.exe",
-              "url": "https://get.opera.com/ftp/pub/opera/desktop/140.0.6074.36/win/Opera_140.0.6074.36_Setup.exe"
+              "filename": "Opera_141.0.6089.28_Setup.exe",
+              "url": "https://get.opera.com/ftp/pub/opera/desktop/141.0.6089.28/win/Opera_141.0.6089.28_Setup.exe"
             }
           },
           "source": "https://autoupdate.geo.opera.com/api/verify?product=Opera&version=0.0.0.0"
@@ -48,18 +48,18 @@
     },
     "opera_gx": {
       "name": "Opera GX",
-      "version": "140.0.6074.48",
+      "version": "140.0.6074.73",
       "channels": {
         "stable": {
-          "version": "140.0.6074.48",
+          "version": "140.0.6074.73",
           "files": {
             "x64": {
-              "filename": "Opera_GX_140.0.6074.48_Setup_x64.exe",
-              "url": "https://get.opera.com/ftp/pub/opera_gx/140.0.6074.48/win/Opera_GX_140.0.6074.48_Setup_x64.exe"
+              "filename": "Opera_GX_140.0.6074.73_Setup_x64.exe",
+              "url": "https://get.opera.com/ftp/pub/opera_gx/140.0.6074.73/win/Opera_GX_140.0.6074.73_Setup_x64.exe"
             },
             "x86": {
-              "filename": "Opera_GX_140.0.6074.48_Setup.exe",
-              "url": "https://get.opera.com/ftp/pub/opera_gx/140.0.6074.48/win/Opera_GX_140.0.6074.48_Setup.exe"
+              "filename": "Opera_GX_140.0.6074.73_Setup.exe",
+              "url": "https://get.opera.com/ftp/pub/opera_gx/140.0.6074.73/win/Opera_GX_140.0.6074.73_Setup.exe"
             }
           },
           "source": "https://autoupdate.geo.opera.com/api/verify?product=Opera%20GX&version=0.0.0.0"
@@ -67,5 +67,5 @@
       }
     }
   },
-  "version": "140.0.6074.36"
+  "version": "141.0.6089.28"
 }
