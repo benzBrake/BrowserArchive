@@ -108,24 +108,24 @@
       }
     },
     "nightly": {
-      "version": "1.102.41",
-      "published": "2026-11-26T01:08:23Z",
+      "version": "1.102.44",
+      "published": "2026-11-26T17:11:27Z",
       "chrome": "159.0.8154.34",
       "files": {
         "x64": {
           "filename": "BraveBrowserStandaloneNightlySetup.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.102.41/BraveBrowserStandaloneNightlySetup.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/BraveBrowserStandaloneNightlySetup.exe"
         }
       },
       "packages": {
         "x64": {
           "installer": {
             "filename": "BraveBrowserStandaloneNightlySetup.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.41/BraveBrowserStandaloneNightlySetup.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/BraveBrowserStandaloneNightlySetup.exe"
           },
           "zip": {
-            "filename": "brave-v1.102.41-win32-x64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.41/brave-v1.102.41-win32-x64.zip"
+            "filename": "brave-v1.102.44-win32-x64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-v1.102.44-win32-x64.zip"
           }
         }
       }
