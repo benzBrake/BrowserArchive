@@ -1,45 +1,45 @@
 {
   "name": "Chrome Plus",
-  "version": "1.20.1",
+  "version": "1.20.2",
   "date": "2026-11-27",
-  "source": "https://github.com/Bush2021/chrome_plus/releases/tag/1.20.1",
+  "source": "https://github.com/Bush2021/chrome_plus/releases/tag/1.20.2",
   "release": {
-    "tag_name": "1.20.1",
-    "name": "1.20.1",
-    "published_at": "2026-11-16T18:00:31Z",
-    "created_at": "2026-11-16T18:00:02Z",
-    "html_url": "https://github.com/Bush2021/chrome_plus/releases/tag/1.20.1",
-    "body": "## Fix\n* edc7a42 fix: detect the New Tab page in fullscreen for `new_tab_disable` by @Bush2021\n\n    > **Resolves #299** - With `open_bookmark_new_tab` and `new_tab_disable` both on, clicking a bookmark from a New Tab page in fullscreen (F11) now opens it in that tab, the same as in a normal window. Before this fix, bookmarks clicked in fullscreen always opened in a new tab.\n\n**Full Changelog**: https://github.com/Bush2021/chrome_plus/compare/1.20.0...1.20.1\n",
+    "tag_name": "1.20.2",
+    "name": "1.20.2",
+    "published_at": "2026-11-27T03:17:51Z",
+    "created_at": "2026-11-27T03:17:28Z",
+    "html_url": "https://github.com/Bush2021/chrome_plus/releases/tag/1.20.2",
+    "body": "## Fix\r\n* eccdd62 fix: check results of path and memory APIs by @Bush2021\r\n* 3c2a9ef fix: patch the about page in zstd-compressed paks by @Bush2021\r\n\r\n    > On Chrome 160.0.8184 and later, the About page shows the Chrome++ Next version line again and hides the update error. These Chrome versions compress their built-in pages with zstd instead of gzip, which Chrome++ Next could not read until now.\r\n    >\r\n    > The browser keeps the patched page in `Chrome++_PakCache.bin` in the user data directory, so only the first start after a Chrome or Chrome++ Next update spends time preparing it.\r\n    >\r\n    > `version.dll` now carries a zstd decoder and encoder, which adds about 105-115 KB depending on the architecture.\r\n\r\n* fd89177 fix: keep the gzip pak patch inside its slot by @Bush2021\r\n\r\n## Maintenance\r\n* df38f84 chore: move clang-tidy checks into .clang-tidy and add clice config by @Bush2021\r\n* d643a8b refactor: avoid string copies flagged by clang-tidy by @Bush2021\r\n* 77502f6 perf: skip the launch thread when no commands are set by @Bush2021\r\n* 12dbf5f perf: skip the pak scan in renderers after the browser misses by @Bush2021\r\n* 26b1341 perf: cache the pak patch result across browser starts by @Bush2021\r\n\r\n**Full Changelog**: https://github.com/Bush2021/chrome_plus/compare/1.20.1...1.20.2",
     "prerelease": false,
     "draft": false
   },
   "files": [
     {
-      "filename": "Chrome++_v1.20.1_x86_x64_arm64.7z",
-      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.20.1/Chrome%2B%2B_v1.20.1_x86_x64_arm64.7z",
-      "size": 199059,
+      "filename": "Chrome++_v1.20.2_x86_x64_arm64.7z",
+      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.20.2/Chrome%2B%2B_v1.20.2_x86_x64_arm64.7z",
+      "size": 358535,
       "content_type": "application/x-7z-compressed",
-      "download_count": 1809,
-      "created_at": "2026-11-16T18:00:30Z",
-      "updated_at": "2026-11-16T18:00:30Z"
+      "download_count": 433,
+      "created_at": "2026-11-27T03:17:50Z",
+      "updated_at": "2026-11-27T03:17:50Z"
     },
     {
       "filename": "setdll.7z",
-      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.20.1/setdll.7z",
-      "size": 289737,
+      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.20.2/setdll.7z",
+      "size": 448842,
       "content_type": "application/x-7z-compressed",
-      "download_count": 360,
-      "created_at": "2026-11-16T18:00:30Z",
-      "updated_at": "2026-11-16T18:00:30Z"
+      "download_count": 83,
+      "created_at": "2026-11-27T03:17:50Z",
+      "updated_at": "2026-11-27T03:17:50Z"
     },
     {
       "filename": "update.json",
-      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.20.1/update.json",
+      "url": "https://github.com/Bush2021/chrome_plus/releases/download/1.20.2/update.json",
       "size": 124,
       "content_type": "application/json",
-      "download_count": 2463,
-      "created_at": "2026-11-16T18:00:30Z",
-      "updated_at": "2026-11-16T18:00:30Z"
+      "download_count": 214,
+      "created_at": "2026-11-27T03:17:50Z",
+      "updated_at": "2026-11-27T03:17:50Z"
     }
   ]
 }
