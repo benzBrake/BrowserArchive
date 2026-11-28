@@ -2,7 +2,7 @@
   "schema_version": 2,
   "name": "Brave",
   "version": "1.100.59",
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "source": "https://versions.brave.com/latest/brave-versions.json",
   "channels": {
     "stable": {
@@ -108,24 +108,24 @@
       }
     },
     "nightly": {
-      "version": "1.102.44",
-      "published": "2026-11-26T17:11:27Z",
+      "version": "1.102.48",
+      "published": "2026-11-27T17:10:23Z",
       "chrome": "159.0.8154.34",
       "files": {
         "x64": {
           "filename": "BraveBrowserStandaloneNightlySetup.exe",
-          "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/BraveBrowserStandaloneNightlySetup.exe"
+          "url": "https://github.com/brave/brave-browser/releases/download/v1.102.48/BraveBrowserStandaloneNightlySetup.exe"
         }
       },
       "packages": {
         "x64": {
           "installer": {
             "filename": "BraveBrowserStandaloneNightlySetup.exe",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/BraveBrowserStandaloneNightlySetup.exe"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.48/BraveBrowserStandaloneNightlySetup.exe"
           },
           "zip": {
-            "filename": "brave-v1.102.44-win32-x64.zip",
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.44/brave-v1.102.44-win32-x64.zip"
+            "filename": "brave-v1.102.48-win32-x64.zip",
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.102.48/brave-v1.102.48-win32-x64.zip"
           }
         }
       }
