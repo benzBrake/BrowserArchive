@@ -1,79 +1,79 @@
 {
   "name": "ungoogled-chromium Windows",
-  "version": "158.0.8127.36",
-  "release_version": "158.0.8127.36-1.1",
-  "date": "2026-11-27",
-  "source": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/tag/158.0.8127.36-1.1",
+  "version": "158.0.8127.88",
+  "release_version": "158.0.8127.88-1.1",
+  "date": "2026-11-28",
+  "source": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/tag/158.0.8127.88-1.1",
   "release": {
-    "tag_name": "158.0.8127.36-1.1",
-    "name": "158.0.8127.36-1.1",
-    "published_at": "2026-11-22T18:39:18Z",
-    "created_at": "2026-11-20T17:22:20Z",
-    "html_url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/tag/158.0.8127.36-1.1",
+    "tag_name": "158.0.8127.88-1.1",
+    "name": "158.0.8127.88-1.1",
+    "published_at": "2026-11-27T16:21:58Z",
+    "created_at": "2026-11-24T18:20:37Z",
+    "html_url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/tag/158.0.8127.88-1.1",
     "body": null,
     "prerelease": false,
     "draft": false
   },
   "files": [
     {
-      "filename": "ungoogled-chromium_158.0.8127.36-1.1_installer_arm64.exe",
-      "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/158.0.8127.36-1.1/ungoogled-chromium_158.0.8127.36-1.1_installer_arm64.exe",
-      "size": 138182144,
+      "filename": "ungoogled-chromium_158.0.8127.88-1.1_installer_arm64.exe",
+      "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/158.0.8127.88-1.1/ungoogled-chromium_158.0.8127.88-1.1_installer_arm64.exe",
+      "size": 138238976,
       "content_type": "application/x-msdos-program",
-      "download_count": 1583,
-      "created_at": "2026-11-22T18:39:02Z",
-      "updated_at": "2026-11-22T18:39:09Z",
-      "digest": "sha256:85a7ce2b7c6f34b1877355eb3381512118148a17049029d7a33e543d4e4a8efb"
+      "download_count": 126,
+      "created_at": "2026-11-27T16:21:48Z",
+      "updated_at": "2026-11-27T16:21:56Z",
+      "digest": "sha256:c5217eb10ae385389ebea4df1c9d92d93834981f823ba386cbc35a3a2fd57279"
     },
     {
-      "filename": "ungoogled-chromium_158.0.8127.36-1.1_installer_x64.exe",
-      "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/158.0.8127.36-1.1/ungoogled-chromium_158.0.8127.36-1.1_installer_x64.exe",
-      "size": 132453376,
+      "filename": "ungoogled-chromium_158.0.8127.88-1.1_installer_x64.exe",
+      "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/158.0.8127.88-1.1/ungoogled-chromium_158.0.8127.88-1.1_installer_x64.exe",
+      "size": 132439040,
       "content_type": "application/x-msdos-program",
-      "download_count": 6071,
-      "created_at": "2026-11-22T18:39:02Z",
-      "updated_at": "2026-11-22T18:39:18Z",
-      "digest": "sha256:2485b37c68564c3c535358864d0526fc469f86309a58ff1a0a10dc1bec65932c"
+      "download_count": 444,
+      "created_at": "2026-11-27T16:21:48Z",
+      "updated_at": "2026-11-27T16:21:56Z",
+      "digest": "sha256:dd4619ec383a9ee097b87f8c1d7deadcb44a0704b7e8e10bed10e1beac4d3c6a"
     },
     {
-      "filename": "ungoogled-chromium_158.0.8127.36-1.1_installer_x86.exe",
-      "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/158.0.8127.36-1.1/ungoogled-chromium_158.0.8127.36-1.1_installer_x86.exe",
-      "size": 123089920,
+      "filename": "ungoogled-chromium_158.0.8127.88-1.1_installer_x86.exe",
+      "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/158.0.8127.88-1.1/ungoogled-chromium_158.0.8127.88-1.1_installer_x86.exe",
+      "size": 123101184,
       "content_type": "application/x-msdos-program",
-      "download_count": 1677,
-      "created_at": "2026-11-22T18:39:02Z",
-      "updated_at": "2026-11-22T18:39:07Z",
-      "digest": "sha256:c1567f9a60b0b91c5665949d23799f73142a3b5c583ca98310f90763277a35e2"
+      "download_count": 134,
+      "created_at": "2026-11-27T16:21:48Z",
+      "updated_at": "2026-11-27T16:21:54Z",
+      "digest": "sha256:d11d8ee0d4844b98152f0d7e74a284a0d0a20f183f667c1ba196defbc44f4265"
     },
     {
-      "filename": "ungoogled-chromium_158.0.8127.36-1.1_windows_arm64.zip",
-      "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/158.0.8127.36-1.1/ungoogled-chromium_158.0.8127.36-1.1_windows_arm64.zip",
-      "size": 198175114,
+      "filename": "ungoogled-chromium_158.0.8127.88-1.1_windows_arm64.zip",
+      "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/158.0.8127.88-1.1/ungoogled-chromium_158.0.8127.88-1.1_windows_arm64.zip",
+      "size": 198179015,
       "content_type": "application/zip",
-      "download_count": 1502,
-      "created_at": "2026-11-22T18:39:02Z",
-      "updated_at": "2026-11-22T18:39:08Z",
-      "digest": "sha256:d100e088fa975c5bf58c4662d796c3a2b300771ded12503896aa26f7e8a173d1"
+      "download_count": 117,
+      "created_at": "2026-11-27T16:21:48Z",
+      "updated_at": "2026-11-27T16:21:58Z",
+      "digest": "sha256:9b0948a47211a51c44412beda244c8c1f3e6e91964002efd131a2a4d36878e7d"
     },
     {
-      "filename": "ungoogled-chromium_158.0.8127.36-1.1_windows_x64.zip",
-      "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/158.0.8127.36-1.1/ungoogled-chromium_158.0.8127.36-1.1_windows_x64.zip",
-      "size": 204306715,
+      "filename": "ungoogled-chromium_158.0.8127.88-1.1_windows_x64.zip",
+      "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/158.0.8127.88-1.1/ungoogled-chromium_158.0.8127.88-1.1_windows_x64.zip",
+      "size": 204309857,
       "content_type": "application/zip",
-      "download_count": 5726,
-      "created_at": "2026-11-22T18:39:02Z",
-      "updated_at": "2026-11-22T18:39:09Z",
-      "digest": "sha256:bc78b9590881f8ca99aca29288d1b347ffdd689ca8a57384bb0bc113ef687b6b"
+      "download_count": 424,
+      "created_at": "2026-11-27T16:21:48Z",
+      "updated_at": "2026-11-27T16:21:57Z",
+      "digest": "sha256:655e039901f3efe9e8b6308397ab9f528ae86617bce844125626d24b82494633"
     },
     {
-      "filename": "ungoogled-chromium_158.0.8127.36-1.1_windows_x86.zip",
-      "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/158.0.8127.36-1.1/ungoogled-chromium_158.0.8127.36-1.1_windows_x86.zip",
-      "size": 196575427,
+      "filename": "ungoogled-chromium_158.0.8127.88-1.1_windows_x86.zip",
+      "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/158.0.8127.88-1.1/ungoogled-chromium_158.0.8127.88-1.1_windows_x86.zip",
+      "size": 196580135,
       "content_type": "application/zip",
-      "download_count": 1577,
-      "created_at": "2026-11-22T18:39:02Z",
-      "updated_at": "2026-11-22T18:39:09Z",
-      "digest": "sha256:60a25560a0d4643d965fb5d83c6ceed6872c854e262cc8ecd9ed1f9a1f9f7008"
+      "download_count": 123,
+      "created_at": "2026-11-27T16:21:48Z",
+      "updated_at": "2026-11-27T16:21:57Z",
+      "digest": "sha256:9f32f1464bc980866e2320457f2301776bd0e7c6c6d7ffa7cbdc96ded382b77e"
     }
   ]
 }
